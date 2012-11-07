@@ -39,7 +39,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\X3DField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CADGeometry\" />
+    <Folder Include="CubeMapTexturing\" />
+    <Folder Include="DIS\" />
+    <Folder Include="EnvironmentalEffects\" />
+    <Folder Include="EnvironmentalSensor\" />
+    <Folder Include="EventUtilities\" />
+    <Folder Include="Followers\" />
+    <Folder Include="Geometry2D\" />
+    <Folder Include="Geometry3D\" />
+    <Folder Include="Geospatial\" />
+    <Folder Include="Grouping\" />
+    <Folder Include="HAnim\" />
+    <Folder Include="Interpolation\" />
+    <Folder Include="KeyDeviceSensor\" />
+    <Folder Include="Layering\" />
+    <Folder Include="Layout\" />
+    <Folder Include="Lighting\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="Networking\" />
+    <Folder Include="NURBS\" />
+    <Folder Include="ParticleSystems\" />
+    <Folder Include="PickingSensor\" />
+    <Folder Include="PointDeviceSensor\" />
+    <Folder Include="Rendering\" />
+    <Folder Include="RigidBodyPhysics\" />
+    <Folder Include="Scripting\" />
+    <Folder Include="Shaders\" />
+    <Folder Include="Shape\" />
+    <Folder Include="Sound\" />
+    <Folder Include="Texturing3D\" />
+    <Folder Include="Texturing\" />
+    <Folder Include="Text\" />
+    <Folder Include="Time\" />
+    <Folder Include="VolumeRendering\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
