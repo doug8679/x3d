@@ -5,7 +5,31 @@
     /// represents either TRUE or FALSE. How these values are represented is 
     /// encoding dependent.
     /// </summary>
-    public class SFBool
+    public class SFBool : X3DPrimitiveField<bool>
     {
+        public SFBool()
+        {
+            this.Primitive = false;
+        }
+        
+        public SFBool(bool value)
+        {
+            this.Primitive = value;
+        }
+
+        public SFBool(SFBool obj)
+        {
+            this.Primitive = obj.Primitive;
+        }
+
+        public static implicit operator SFBool(bool value)
+        {
+            return new SFBool { Primitive = value };
+        }
+
+        public static implicit operator bool(SFBool obj)
+        {
+            return obj.Primitive;
+        }
     }
 }

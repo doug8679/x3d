@@ -1,17 +1,16 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("X3dTest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("X3D.NET Unit Test")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("X3dTest")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("https://x3d.codeplex.com")]
+[assembly: AssemblyProduct("X3D.NET Unit Test")]
+[assembly: AssemblyCopyright("Copyright © 2012 X3D.NET")]
+[assembly: AssemblyTrademark("X3D.NET")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

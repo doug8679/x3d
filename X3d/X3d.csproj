@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\SFDouble.cs" />
+    <Compile Include="Core\SFFloat.cs" />
+    <Compile Include="Core\SFInt32.cs" />
+    <Compile Include="Core\X3DPrimitiveField.cs" />
     <Compile Include="Core\SFBool.cs" />
     <Compile Include="Core\X3DField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
