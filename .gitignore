@@ -5,3 +5,6 @@
 /X3d/bin
 /X3dTest/obj
 /X3dTest/bin
+/X3d/*.Cache
+/X3dTest/*.Cache
+/*.user
