@@ -7,6 +7,8 @@
     /// </summary>
     public class SFBool : X3DPrimitiveField<bool>
     {
+        #region Constructors
+
         public SFBool()
         {
             this.Primitive = false;
@@ -22,6 +24,10 @@
             this.Primitive = obj.Primitive;
         }
 
+        #endregion
+
+        #region Boolean Compatibility
+
         public static implicit operator SFBool(bool value)
         {
             return new SFBool { Primitive = value };
@@ -31,5 +37,7 @@
         {
             return obj.Primitive;
         }
+
+        #endregion
     }
 }

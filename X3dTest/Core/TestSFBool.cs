@@ -17,9 +17,9 @@
             var b = new SFBool(a);
             var c = new SFBool(true);
 
-            Assert.AreEqual(false, (bool)a);
-            Assert.AreEqual(false, (bool)b);
-            Assert.AreEqual(true, (bool)c);
+            Assert.AreEqual(a, false);
+            Assert.AreEqual(b, a);
+            Assert.AreEqual(c, true);
         }
 
         [TestMethod]
@@ -29,9 +29,24 @@
             var b = new SFBool(a);
             var c = new SFBool(true);
             
-            Assert.AreEqual((SFBool)false, a);
-            Assert.AreEqual((SFBool)false, b);
-            Assert.AreEqual((SFBool)true, c);
+            Assert.IsTrue(false == a);
+            Assert.IsTrue(false == b);
+            Assert.IsTrue(true == c);
+        }
+
+        [TestMethod]
+        public void BooleanCasting()
+        {
+            var a = new SFBool();
+            var b = new SFBool(a);
+            var c = new SFBool(true);
+
+            bool v = a;
+            SFBool w = v;
+            
+            Assert.IsTrue(a == v);
+            Assert.IsTrue(v == w);
+            Assert.AreEqual(w, a);
         }
     }
 }

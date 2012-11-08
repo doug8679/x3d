@@ -54,6 +54,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Core\TestSFBool.cs" />
+    <Compile Include="Core\TestSFInt32.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
