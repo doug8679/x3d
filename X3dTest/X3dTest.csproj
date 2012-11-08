@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Core\TestSFBool.cs" />
     <Compile Include="Core\TestSFInt32.cs" />
+    <Compile Include="Core\TestSFDouble.cs" />
+    <Compile Include="Core\TestSFFloat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

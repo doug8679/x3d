@@ -1,5 +1,7 @@
 ﻿namespace X3dTest.Core
 {
+    using System.Globalization;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using X3d.Core;
@@ -20,6 +22,7 @@
             Assert.AreEqual(a, 0);
             Assert.AreEqual(b, a);
             Assert.AreEqual(c, 1);
+            Assert.AreNotEqual(a, false);
         }
 
         [TestMethod]
@@ -47,6 +50,26 @@
             Assert.IsTrue(a == v);
             Assert.IsTrue(v == w);
             Assert.AreEqual(w, a);
+        }
+
+        [TestMethod]
+        public void StringConstruction()
+        {
+            var a = new SFInt32();
+            var b = new SFInt32(-1);
+
+            Assert.AreEqual(a.ToString(), 0.ToString(CultureInfo.InvariantCulture));
+            Assert.AreEqual(b.ToString(), (-1).ToString(CultureInfo.InvariantCulture));
+        }
+
+        [TestMethod]
+        public void HashCode()
+        {
+            var a = new SFInt32();
+            var b = new SFInt32(-1);
+
+            Assert.AreEqual(a.GetHashCode(), 0.GetHashCode());
+            Assert.AreEqual(b.GetHashCode(), (-1).GetHashCode());
         }
     }
 }

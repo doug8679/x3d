@@ -20,6 +20,7 @@
             Assert.AreEqual(a, false);
             Assert.AreEqual(b, a);
             Assert.AreEqual(c, true);
+            Assert.AreNotEqual(a, 1);
         }
 
         [TestMethod]
@@ -47,6 +48,26 @@
             Assert.IsTrue(a == v);
             Assert.IsTrue(v == w);
             Assert.AreEqual(w, a);
+        }
+
+        [TestMethod]
+        public void StringConstruction()
+        {
+            var a = new SFBool();
+            var b = new SFBool(true);
+
+            Assert.AreEqual(a.ToString(), bool.FalseString);
+            Assert.AreEqual(b.ToString(), bool.TrueString);
+        }
+
+        [TestMethod]
+        public void HashCode()
+        {
+            var a = new SFBool();
+            var b = new SFBool(true);
+
+            Assert.AreEqual(a.GetHashCode(), false.GetHashCode());
+            Assert.AreEqual(b.GetHashCode(), true.GetHashCode());
         }
     }
 }
