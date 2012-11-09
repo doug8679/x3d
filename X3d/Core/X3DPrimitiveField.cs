@@ -1,13 +1,24 @@
 ﻿namespace X3d.Core
 {
     /// <summary>
-    /// X3DPrimitiveField is the abstract field type from which all primitive
-    /// single values field types are derived. <see cref="SFBool" />,
-    /// <see cref="SFDouble" />, <see cref="SFFloat" /> and <see cref="SFInt32" />
-    /// are primitive data field types.
+    /// X3DPrimitiveField is the abstract non-generic field type inherited by
+    /// generic version of this class. This is needed to group all the instantiated
+    /// classes such as <see cref="SFBool" />, <see cref="SFDouble" />, 
+    /// <see cref="SFFloat" /> and <see cref="SFInt32" /> are primitive data 
+    /// field types.
+    /// </summary>
+    public abstract class X3DPrimitiveField : X3DField
+    {
+    }
+
+    /// <summary>
+    /// X3DPrimitiveField is the abstract generic field type from which all primitive
+    /// field types are derived. <see cref="SFBool" />, <see cref="SFDouble" />, 
+    /// <see cref="SFFloat" /> and <see cref="SFInt32" /> are primitive data 
+    /// field types.
     /// </summary>
     /// <typeparam name="TPrimitive">.NET Framework equivalant primitive data type</typeparam>
-    public abstract class X3DPrimitiveField<TPrimitive> : X3DField
+    public abstract class X3DPrimitiveField<TPrimitive> : X3DPrimitiveField
         where TPrimitive : struct
     {
         protected TPrimitive Primitive { get; set; }

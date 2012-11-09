@@ -43,9 +43,16 @@
     <Compile Include="Core\SFFloat.cs" />
     <Compile Include="Core\SFInt32.cs" />
     <Compile Include="Core\SFString.cs" />
+    <Compile Include="Core\SFVec2d.cs" />
+    <Compile Include="Core\SFVec2f.cs" />
+    <Compile Include="Core\SFVec3d.cs" />
+    <Compile Include="Core\SFVec3f.cs" />
+    <Compile Include="Core\SFVec4d.cs" />
+    <Compile Include="Core\SFVec4f.cs" />
     <Compile Include="Core\X3DPrimitiveField.cs" />
     <Compile Include="Core\SFBool.cs" />
     <Compile Include="Core\X3DField.cs" />
+    <Compile Include="Core\X3DVectorField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
