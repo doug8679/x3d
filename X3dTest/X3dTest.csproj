@@ -58,6 +58,12 @@
     <Compile Include="Core\TestSFDouble.cs" />
     <Compile Include="Core\TestSFFloat.cs" />
     <Compile Include="Core\TestSFString.cs" />
+    <Compile Include="Core\TestSFVec2f.cs" />
+    <Compile Include="Core\TestSFVec2d.cs" />
+    <Compile Include="Core\TestSFVec3d.cs" />
+    <Compile Include="Core\TestSFVec3f.cs" />
+    <Compile Include="Core\TestSFVec4d.cs" />
+    <Compile Include="Core\TestSFVec4f.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

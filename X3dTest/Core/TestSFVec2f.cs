@@ -1,0 +1,40 @@
+﻿namespace X3dTest.Core
+{
+    using System;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    using X3d.Core;
+
+    [TestClass]
+    public class TestSFVec2f
+    {
+        private const float EPSILON = 0.0000001f;
+
+        [TestMethod]
+        public void Constructor()
+        {
+            var a = new SFVec2f();
+
+            Assert.IsTrue(Math.Abs(a.X - 0.0f) < EPSILON);
+            Assert.IsTrue(Math.Abs(a.Y - 0.0f) < EPSILON);
+
+            var b = new SFVec2f(1, 1);
+
+            Assert.IsTrue(Math.Abs(b.X - 1.0f) < EPSILON);
+            Assert.IsTrue(Math.Abs(b.Y - 1.0f) < EPSILON);
+        }
+
+        [TestMethod]
+        public void ElementAssignment()
+        {
+            var a = new SFVec2d();
+
+            a.X = 1;
+            a.Y = 1;
+
+            Assert.IsTrue(Math.Abs(a.X - 1.0) < EPSILON);
+            Assert.IsTrue(Math.Abs(a.Y - 1.0) < EPSILON);
+        }
+    }
+}
