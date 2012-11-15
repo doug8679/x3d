@@ -54,10 +54,13 @@
         }
 
         [TestMethod]
-        public void StringConstruction()
+        public void StringCompatibility()
         {
             var a = new SFDouble();
             var b = new SFDouble(123456.12345678901234);
+
+            var d1 = a.ToString();
+            var d2 = b.ToString();
 
             Assert.AreEqual(a.ToString(), 0.0.ToString(CultureInfo.InvariantCulture));
             Assert.AreEqual(b.ToString(), 123456.12345678901234.ToString(CultureInfo.InvariantCulture));

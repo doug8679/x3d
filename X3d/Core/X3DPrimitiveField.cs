@@ -17,7 +17,7 @@
     /// <see cref="SFFloat" /> and <see cref="SFInt32" /> are primitive data 
     /// field types.
     /// </summary>
-    /// <typeparam name="TPrimitive">.NET Framework equivalant primitive data type</typeparam>
+    /// <typeparam name="TPrimitive">.NET Framework equivalent primitive data type</typeparam>
     public abstract class X3DPrimitiveField<TPrimitive> : X3DPrimitiveField
         where TPrimitive : struct
     {

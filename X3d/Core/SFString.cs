@@ -38,18 +38,12 @@
 
         public override bool Equals(object obj)
         {
-            if (obj is SFString)
+            if ((obj as SFString) != null)
             {
                 return this.Data.Equals(((SFString)obj).Data);
             }
-            else if (obj is string)
-            {
-                return this.Data.Equals(obj);
-            }
-            else
-            {
-                return false;
-            }
+            
+            return (obj as string) != null && this.Data.Equals(obj);
         }
 
         #endregion

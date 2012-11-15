@@ -43,5 +43,14 @@
         }
 
         #endregion
+
+        #region String Compatibility
+
+        public override string ToString()
+        {
+            return string.Format("{0:F}", this.Primitive).TrimEnd('0');
+        }
+
+        #endregion
     }
 }

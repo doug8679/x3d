@@ -36,5 +36,28 @@
             Assert.IsTrue(Math.Abs(a.X - 1.0) < EPSILON);
             Assert.IsTrue(Math.Abs(a.Y - 1.0) < EPSILON);
         }
+
+        [TestMethod]
+        public void ObjectEquality()
+        {
+            var a = new SFVec2d(0.123456789, 0.987654321);
+            var b = new SFVec2d(0.123456789, 0.987654321);
+            var c = new SFVec2d(0.987654321, 0.123456789);
+
+            Assert.AreEqual(a, b);
+            Assert.AreNotEqual(a, c);
+            Assert.AreNotEqual(b, c);
+            Assert.AreEqual(a, a);
+            Assert.AreEqual(c, c);
+        }
+
+        [TestMethod]
+        public void StringCompatibility()
+        {
+            const string s1 = "0.123456789 0.987654321";
+            var a = new SFVec2d(0.123456789, 0.987654321);
+            
+            Assert.AreEqual(s1, a.ToString());
+        }
     }
 }

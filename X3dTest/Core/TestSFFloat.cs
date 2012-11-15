@@ -54,7 +54,7 @@
         }
 
         [TestMethod]
-        public void StringConstruction()
+        public void StringCompatibility()
         {
             var a = new SFFloat();
             var b = new SFFloat(123456.123456f);

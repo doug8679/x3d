@@ -44,5 +44,15 @@
             Assert.IsTrue(Math.Abs(a.Z - 1.0) < EPSILON);
             Assert.IsTrue(Math.Abs(a.Homegeneous - 0.0) < EPSILON);
         }
+
+        [TestMethod]
+        public void ObjectEquality()
+        {
+        }
+
+        [TestMethod]
+        public void StringCompatibility()
+        {
+        }
     }
 }

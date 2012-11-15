@@ -1,17 +1,10 @@
 ﻿namespace X3d.Core
 {
     /// <summary>
-    /// X3DVectorField is the abstract field type from which all vector value field types are derived.
-    /// </summary>
-    public abstract class X3DVectorField : X3DField
-    {
-    }
-
-    /// <summary>
     /// X3DVec2Field represents the second dimensional vector data structure.
     /// </summary>
     /// <typeparam name="TPrimitive">Vector element type</typeparam>
-    public abstract class X3DVec2Field<TPrimitive> : X3DVectorField
+    public abstract class X3DVec2Field<TPrimitive> : X3DField
         where TPrimitive : X3DPrimitiveField, new()
     {
         #region Constructors
@@ -39,7 +32,6 @@
             {
                 return this.Elements[0];
             }
-
             set
             {
                 this.Elements[0] = value;
@@ -52,7 +44,6 @@
             {
                 return this.Elements[1];
             }
-
             set
             {
                 this.Elements[1] = value;
@@ -60,6 +51,37 @@
         }
 
         #endregion
+
+        #region Object Equality
+
+        public override int GetHashCode()
+        {
+            return this.Elements.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is X3DVec2Field<TPrimitive>)
+            {
+                var casted = (X3DVec2Field<TPrimitive>)obj;
+
+                return this.X.Equals(casted.X) && this.Y.Equals(casted.Y);
+            }
+
+            return false;
+        }
+
+        #endregion
+
+        #region String Compatibility
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", this.X.ToString(), this.Y.ToString());
+        }
+
+        #endregion
+
     }
 
     public abstract class X3DVec3Field<TPrimitive> : X3DVec2Field<TPrimitive>
@@ -89,11 +111,49 @@
             {
                 return this.Elements[2];
             }
-
             set
             {
                 this.Elements[2] = value;
             }
+        }
+
+        #endregion
+
+        #region Object Equality
+
+        public override int GetHashCode()
+        {
+            return this.Elements.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is X3DVec3Field<TPrimitive>)
+            {
+                var casted = (X3DVec3Field<TPrimitive>)obj;
+
+                return this.X.Equals(casted.X) 
+                    && this.Y.Equals(casted.Y) 
+                    && this.Z.Equals(casted.Z);
+            }
+
+            return false;
+        }
+
+        #endregion
+
+        #region String Compatibility
+
+        public override string ToString()
+        {
+            var x = this.X.ToString();
+            var y = this.Y.ToString();
+            var z = this.Z.ToString();
+
+            return string.Format("{0} {1} {2}", 
+                                 this.X.ToString(), 
+                                 this.Y.ToString(),
+                                 this.Z.ToString());
         }
 
         #endregion
@@ -132,6 +192,43 @@
             {
                 this.Elements[3] = value;
             }
+        }
+
+        #endregion
+
+        #region Object Equality
+
+        public override int GetHashCode()
+        {
+            return this.Elements.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is X3DVec4Field<TPrimitive>)
+            {
+                var casted = (X3DVec4Field<TPrimitive>)obj;
+
+                return this.X.Equals(casted.X) 
+                    && this.Y.Equals(casted.Y) 
+                    && this.Z.Equals(casted.Z)
+                    && this.Homegeneous.Equals(casted.Homegeneous);
+            }
+
+            return false;
+        }
+
+        #endregion
+
+        #region String Compatibility
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2} {3}",
+                                 this.X.ToString(),
+                                 this.Y.ToString(),
+                                 this.Z.ToString(),
+                                 this.Homegeneous.ToString());
         }
 
         #endregion
