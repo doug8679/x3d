@@ -48,11 +48,36 @@
         [TestMethod]
         public void ObjectEquality()
         {
+            var a = new SFVec4f(1234567.123456f, -1234567.987654f, 0.000001f, -0.111111f);
+            var b = new SFVec4f(1234567.123456f, -1234567.987654f, 0.000001f, -0.111111f);
+            var c = new SFVec4f(1234567.987654f, -1234567.123456f, 0.000001f, -0.111111f);
+
+            Assert.AreEqual(a, b);
+            Assert.AreNotEqual(a, c);
+            Assert.AreNotEqual(b, c);
+            Assert.AreEqual(a, a);
+            Assert.AreEqual(c, c);
+
+            Assert.AreNotEqual(c, false);
         }
 
         [TestMethod]
         public void StringCompatibility()
         {
+            const string s = "123.123 -123.987 0.000001 -0.111111";
+            var a = new SFVec4f(123.123f, -123.987f, 0.000001f, -0.111111f);
+            var t = a.ToString();
+
+            Assert.AreEqual(s, a.ToString());
+        }
+
+        [TestMethod]
+        public void HashCode()
+        {
+            var a = new SFVec4f();
+            var b = new SFVec4f();
+
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
         }
     }
 }

@@ -49,6 +49,8 @@
             Assert.AreNotEqual(b, c);
             Assert.AreEqual(a, a);
             Assert.AreEqual(c, c);
+
+            Assert.AreNotEqual(c, false);
         }
 
         [TestMethod]
@@ -58,6 +60,15 @@
             var a = new SFVec2f(0.123456f, 0.987654f);
 
             Assert.AreEqual(s1, a.ToString());
+        }
+
+        [TestMethod]
+        public void HashCode()
+        {
+            var a = new SFVec2f();
+            var b = new SFVec2f();
+
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
         }
     }
 }

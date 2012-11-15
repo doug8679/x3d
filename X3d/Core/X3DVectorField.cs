@@ -1,5 +1,7 @@
 ﻿namespace X3d.Core
 {
+    using System;
+
     /// <summary>
     /// X3DVec2Field represents the second dimensional vector data structure.
     /// </summary>
@@ -7,6 +9,8 @@
     public abstract class X3DVec2Field<TPrimitive> : X3DField
         where TPrimitive : X3DPrimitiveField, new()
     {
+        protected readonly int[] HashTablePrimeNumbers = new int[4] { 73856093, 19349663, 83492791, 39916801 };
+
         #region Constructors
 
         protected X3DVec2Field()
@@ -56,7 +60,10 @@
 
         public override int GetHashCode()
         {
-            return this.Elements.GetHashCode();
+            var xHash = this.X.GetHashCode() * HashTablePrimeNumbers[0];
+            var yHash = this.Y.GetHashCode() * HashTablePrimeNumbers[1];
+
+            return (xHash ^ yHash);
         }
 
         public override bool Equals(object obj)
@@ -123,7 +130,9 @@
 
         public override int GetHashCode()
         {
-            return this.Elements.GetHashCode();
+            var zHash = this.Z.GetHashCode() * HashTablePrimeNumbers[2];
+
+            return (base.GetHashCode() ^ zHash);
         }
 
         public override bool Equals(object obj)
@@ -146,10 +155,6 @@
 
         public override string ToString()
         {
-            var x = this.X.ToString();
-            var y = this.Y.ToString();
-            var z = this.Z.ToString();
-
             return string.Format("{0} {1} {2}", 
                                  this.X.ToString(), 
                                  this.Y.ToString(),
@@ -200,7 +205,9 @@
 
         public override int GetHashCode()
         {
-            return this.Elements.GetHashCode();
+            var hHash = this.Homegeneous.GetHashCode() * HashTablePrimeNumbers[3];
+
+            return (base.GetHashCode() ^ hHash);
         }
 
         public override bool Equals(object obj)

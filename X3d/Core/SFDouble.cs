@@ -48,7 +48,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0:F}", this.Primitive).TrimEnd('0');
+            return this.Primitive.ToString("0.000000000000").TrimEnd('0').TrimEnd('.');
         }
 
         #endregion
