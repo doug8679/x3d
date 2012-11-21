@@ -12,7 +12,13 @@
     /// </summary>
     public class SFColorRGBA : SFVec4f
     {
-        public SFColorRGBA() : base(0, 0, 0, 0)
+        public SFColorRGBA() 
+            : base(0, 0, 0, 0)
+        {
+        }
+
+        public SFColorRGBA(SFFloat red, SFFloat green, SFFloat blue, SFFloat alpha)
+            : base(ValidateValueRange(red), ValidateValueRange(green), ValidateValueRange(blue), ValidateValueRange(alpha))
         {
         }
 

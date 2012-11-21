@@ -1,6 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
+    using System.ComponentModel;
 
     /// <summary>
     /// The SFColor field specifies one RGB (red-green-blue) color triple.
@@ -10,6 +11,16 @@
     /// </summary>
     public class SFColor : SFVec3f
     {
+        public SFColor()
+            : base(0.0f, 0.0f, 0.0f)
+        {
+        }
+
+        public SFColor(SFFloat red, SFFloat green, SFFloat blue)
+            : base(ValidateValueRange(red), ValidateValueRange(green), ValidateValueRange(blue))
+        {
+        }
+
         #region Color Component Properties
 
         public SFFloat Red
