@@ -1,10 +1,10 @@
 ﻿namespace X3d.Core
 {
     /// <summary>
-    /// The SFString field contain strings encoded with the UTF-8 universal 
-    /// character set. Any characters (including linefeeds and '#') may appear 
-    /// within the string. The default value of an uninitialized SFString 
-    /// outputOnly field is the empty string. 
+    /// The SFString field contain strings encoded with the UTF-8 universal
+    /// character set. Any characters (including linefeeds and '#') may appear
+    /// within the string. The default value of an uninitialized SFString
+    /// outputOnly field is the empty string.
     /// </summary>
     public class SFString : X3DField
     {
@@ -25,7 +25,7 @@
             this.Data = obj.Data;
         }
 
-        #endregion
+        #endregion Constructors
 
         private string Data { get; set; }
 
@@ -42,11 +42,11 @@
             {
                 return this.Data.Equals(((SFString)obj).Data);
             }
-            
+
             return (obj as string) != null && this.Data.Equals(obj);
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
@@ -54,10 +54,10 @@
         {
             return this.Data;
         }
-        
+
         public static implicit operator SFString(string obj)
         {
-            return new SFString(obj);    
+            return new SFString(obj);
         }
 
         public static implicit operator string(SFString obj)
@@ -65,6 +65,6 @@
             return obj.Data;
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 }

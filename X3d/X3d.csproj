@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\SFColor.cs" />
+    <Compile Include="Core\SFColorRGBA.cs" />
     <Compile Include="Core\SFDouble.cs" />
     <Compile Include="Core\SFFloat.cs" />
     <Compile Include="Core\SFInt32.cs" />

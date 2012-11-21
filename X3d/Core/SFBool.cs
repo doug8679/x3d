@@ -1,8 +1,8 @@
 ﻿namespace X3d.Core
 {
     /// <summary>
-    /// The SFBool field specifies a single Boolean value. Each Boolean value 
-    /// represents either TRUE or FALSE. How these values are represented is 
+    /// The SFBool field specifies a single Boolean value. Each Boolean value
+    /// represents either TRUE or FALSE. How these values are represented is
     /// encoding dependent.
     /// </summary>
     public class SFBool : X3DPrimitiveField<bool>
@@ -13,7 +13,7 @@
         {
             this.Primitive = false;
         }
-        
+
         public SFBool(bool value)
         {
             this.Primitive = value;
@@ -24,7 +24,7 @@
             this.Primitive = obj.Primitive;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Boolean Compatibility
 
@@ -38,6 +38,6 @@
             return obj.Primitive;
         }
 
-        #endregion
+        #endregion Boolean Compatibility
     }
 }

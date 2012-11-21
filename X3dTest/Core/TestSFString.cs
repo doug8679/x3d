@@ -17,7 +17,7 @@
             var b = new SFString();
             var c = new SFString("hello");
             var d = new SFString(c);
-            
+
             Assert.AreEqual(a, c);
             Assert.AreEqual(a, d);
             Assert.AreNotEqual(a, b);
@@ -39,10 +39,10 @@
         public void Equality()
         {
             SFString a = "test";
-            int b = 0;
+            const int B = 0;
 
             Assert.AreEqual(a, a);
-            Assert.AreNotEqual(a, b);
+            Assert.AreNotEqual(a, B);
         }
 
         [TestMethod]
@@ -60,11 +60,11 @@
         {
             SFString a = "hello";
             SFString b = "hello";
-            string c = "hello";
+            const string C = "hello";
 
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
-            Assert.AreEqual(a.GetHashCode(), c.GetHashCode());
-            Assert.AreEqual(b.GetHashCode(), c.GetHashCode());
+            Assert.AreEqual(a.GetHashCode(), C.GetHashCode());
+            Assert.AreEqual(b.GetHashCode(), C.GetHashCode());
         }
     }
 }

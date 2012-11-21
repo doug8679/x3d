@@ -2,11 +2,11 @@
 {
     /// <summary>
     /// The SFDouble field specifies one double-precision floating point number.
-    /// Implementation of these fields is targeted at the double precision 
+    /// Implementation of these fields is targeted at the double precision
     /// floating point capabilities of processors. However, it is allowable to
-    /// implement this field using fixed point numbering provided at least 14 
-    /// decimal digits of precision are maintained and that exponents have 
-    /// range of at least [-12, 12] for both positive and negative numbers. 
+    /// implement this field using fixed point numbering provided at least 14
+    /// decimal digits of precision are maintained and that exponents have
+    /// range of at least [-12, 12] for both positive and negative numbers.
     /// The default value of an uninitialized SFDouble field is 0.0.
     /// </summary>
     public class SFDouble : X3DPrimitiveField<double>
@@ -28,7 +28,7 @@
             this.Primitive = obj.Primitive;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Double Compatibility
 
@@ -42,7 +42,7 @@
             return obj.Primitive;
         }
 
-        #endregion
+        #endregion Double Compatibility
 
         #region String Compatibility
 
@@ -51,6 +51,6 @@
             return this.Primitive.ToString("0.000000000000").TrimEnd('0').TrimEnd('.');
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 }

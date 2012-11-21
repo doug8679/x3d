@@ -29,7 +29,7 @@
             var a = new SFBool();
             var b = new SFBool(a);
             var c = new SFBool(true);
-            
+
             Assert.IsTrue(false == a);
             Assert.IsTrue(false == b);
             Assert.IsTrue(true == c);
@@ -44,7 +44,7 @@
 
             bool v = a;
             SFBool w = v;
-            
+
             Assert.IsTrue(a == v);
             Assert.IsTrue(v == w);
             Assert.AreEqual(w, a);

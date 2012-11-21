@@ -1,7 +1,7 @@
 ﻿namespace X3d.Core
 {
     /// <summary>
-    /// The SFInt32 field specifies one 32-bit integer. The default value 
+    /// The SFInt32 field specifies one 32-bit integer. The default value
     /// of an uninitialized SFInt32 field is 0.
     /// </summary>
     public class SFInt32 : X3DPrimitiveField<int>
@@ -23,7 +23,7 @@
             this.Primitive = obj.Primitive;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Integer Compatibility
 
@@ -37,6 +37,6 @@
             return obj.Primitive;
         }
 
-        #endregion
+        #endregion Integer Compatibility
     }
 }

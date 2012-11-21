@@ -1,9 +1,7 @@
 ﻿namespace X3dTest.Core
 {
-    using System;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using System;
     using X3d.Core;
 
     [TestClass]
@@ -29,7 +27,7 @@
         public void ElementAssignment()
         {
             var a = new SFVec2d();
-            
+
             a.X = 1;
             a.Y = 1;
 
@@ -58,7 +56,7 @@
         {
             const string s1 = "0.123456789 0.987654321";
             var a = new SFVec2d(0.123456789, 0.987654321);
-            
+
             Assert.AreEqual(s1, a.ToString());
         }
 

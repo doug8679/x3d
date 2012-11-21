@@ -6,11 +6,13 @@
     /// </summary>
     public class SFVec2d : X3DVec2Field<SFDouble>
     {
-        public SFVec2d() : base(0, 0)
+        public SFVec2d()
+            : base(0, 0)
         {
         }
 
-        public SFVec2d(SFDouble x, SFDouble y) : base(x, y)
+        public SFVec2d(SFDouble x, SFDouble y)
+            : base(x, y)
         {
         }
     }

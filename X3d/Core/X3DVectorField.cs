@@ -1,7 +1,5 @@
 ﻿namespace X3d.Core
 {
-    using System;
-
     /// <summary>
     /// X3DVec2Field represents the second dimensional vector data structure.
     /// </summary>
@@ -18,13 +16,14 @@
             this.Elements = new TPrimitive[2];
         }
 
-        protected X3DVec2Field(TPrimitive x, TPrimitive y) : this()
+        protected X3DVec2Field(TPrimitive x, TPrimitive y)
+            : this()
         {
             this.Elements[0] = x;
             this.Elements[1] = y;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Vector Element Accessors
 
@@ -54,7 +53,7 @@
             }
         }
 
-        #endregion
+        #endregion Vector Element Accessors
 
         #region Object Equality
 
@@ -78,7 +77,7 @@
             return false;
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
@@ -87,8 +86,7 @@
             return string.Format("{0} {1}", this.X.ToString(), this.Y.ToString());
         }
 
-        #endregion
-
+        #endregion String Compatibility
     }
 
     public abstract class X3DVec3Field<TPrimitive> : X3DVec2Field<TPrimitive>
@@ -101,14 +99,15 @@
             this.Elements = new TPrimitive[3];
         }
 
-        protected X3DVec3Field(TPrimitive x, TPrimitive y, TPrimitive z) : this()
+        protected X3DVec3Field(TPrimitive x, TPrimitive y, TPrimitive z)
+            : this()
         {
             this.Elements[0] = x;
             this.Elements[1] = y;
             this.Elements[2] = z;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Vector Element Accessors
 
@@ -124,7 +123,7 @@
             }
         }
 
-        #endregion
+        #endregion Vector Element Accessors
 
         #region Object Equality
 
@@ -141,27 +140,27 @@
             {
                 var casted = (X3DVec3Field<TPrimitive>)obj;
 
-                return this.X.Equals(casted.X) 
-                    && this.Y.Equals(casted.Y) 
+                return this.X.Equals(casted.X)
+                    && this.Y.Equals(casted.Y)
                     && this.Z.Equals(casted.Z);
             }
 
             return false;
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2}", 
-                                 this.X.ToString(), 
+            return string.Format("{0} {1} {2}",
+                                 this.X.ToString(),
                                  this.Y.ToString(),
                                  this.Z.ToString());
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 
     public abstract class X3DVec4Field<TPrimitive> : X3DVec3Field<TPrimitive>
@@ -174,7 +173,8 @@
             this.Elements = new TPrimitive[4];
         }
 
-        protected X3DVec4Field(TPrimitive x, TPrimitive y, TPrimitive z, TPrimitive h) : this()
+        protected X3DVec4Field(TPrimitive x, TPrimitive y, TPrimitive z, TPrimitive h)
+            : this()
         {
             this.Elements[0] = x;
             this.Elements[1] = y;
@@ -182,7 +182,7 @@
             this.Elements[3] = h;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Vector Element Accessors
 
@@ -199,7 +199,7 @@
             }
         }
 
-        #endregion
+        #endregion Vector Element Accessors
 
         #region Object Equality
 
@@ -216,8 +216,8 @@
             {
                 var casted = (X3DVec4Field<TPrimitive>)obj;
 
-                return this.X.Equals(casted.X) 
-                    && this.Y.Equals(casted.Y) 
+                return this.X.Equals(casted.X)
+                    && this.Y.Equals(casted.Y)
                     && this.Z.Equals(casted.Z)
                     && this.Homegeneous.Equals(casted.Homegeneous);
             }
@@ -225,7 +225,7 @@
             return false;
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
@@ -238,6 +238,6 @@
                                  this.Homegeneous.ToString());
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 }
