@@ -66,9 +66,6 @@
             var a = new SFVec2d();
             var b = new SFVec2d();
 
-            int ah = a.GetHashCode();
-            int bh = b.GetHashCode();
-
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
         }
     }

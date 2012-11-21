@@ -39,9 +39,6 @@
         public void IntegerCasting()
         {
             var a = new SFInt32();
-            var b = new SFInt32(a);
-            var c = new SFInt32(1);
-
             int v = a;
             SFInt32 w = v;
 

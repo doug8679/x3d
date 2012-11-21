@@ -40,9 +40,6 @@
         public void FloatCasting()
         {
             var a = new SFFloat();
-            var b = new SFFloat(a);
-            var c = new SFFloat(123456.123456f);
-
             float v = a;
             SFFloat w = v;
 

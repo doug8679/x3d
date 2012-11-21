@@ -1,7 +1,9 @@
 ﻿namespace X3dTest.Core
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     using X3d.Core;
 
     [TestClass]
@@ -64,7 +66,6 @@
         {
             const string s = "123.123 -123.987 0.000001 -0.111111";
             var a = new SFVec4f(123.123f, -123.987f, 0.000001f, -0.111111f);
-            var t = a.ToString();
 
             Assert.AreEqual(s, a.ToString());
         }

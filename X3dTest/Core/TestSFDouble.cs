@@ -40,9 +40,6 @@
         public void DoubleCasting()
         {
             var a = new SFDouble();
-            var b = new SFDouble(a);
-            var c = new SFDouble(123456.12345678901234);
-
             double v = a;
             SFDouble w = v;
 
@@ -56,9 +53,6 @@
         {
             var a = new SFDouble();
             var b = new SFDouble(123456.12345678901234);
-
-            var d1 = a.ToString();
-            var d2 = b.ToString();
 
             Assert.AreEqual(a.ToString(), 0.0.ToString(CultureInfo.InvariantCulture));
             Assert.AreEqual(b.ToString(), 123456.12345678901234.ToString(CultureInfo.InvariantCulture));

@@ -7,7 +7,7 @@
     public abstract class X3DVec2Field<TPrimitive> : X3DField
         where TPrimitive : X3DPrimitiveField, new()
     {
-        protected readonly int[] HashTablePrimeNumbers = new int[4] { 73856093, 19349663, 83492791, 39916801 };
+        protected readonly int[] HashTablePrimeNumbers = new int[] { 73856093, 19349663, 83492791, 39916801 };
 
         #region Constructors
 
@@ -83,7 +83,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} {1}", this.X.ToString(), this.Y.ToString());
+            return string.Format("{0} {1}", this.X, this.Y);
         }
 
         #endregion String Compatibility
@@ -154,10 +154,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2}",
-                                 this.X.ToString(),
-                                 this.Y.ToString(),
-                                 this.Z.ToString());
+            return string.Format("{0} {1} {2}", this.X, this.Y, this.Z);
         }
 
         #endregion String Compatibility
@@ -231,11 +228,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2} {3}",
-                                 this.X.ToString(),
-                                 this.Y.ToString(),
-                                 this.Z.ToString(),
-                                 this.Homegeneous.ToString());
+            return string.Format("{0} {1} {2} {3}", this.X, this.Y, this.Z, this.Homegeneous);
         }
 
         #endregion String Compatibility

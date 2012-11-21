@@ -60,7 +60,6 @@
         {
             const string s = "0.123456789 0.987654321 0.000000001";
             var a = new SFVec3d(0.123456789, 0.987654321, 0.000000001);
-            var t = a.ToString();
 
             Assert.AreEqual(s, a.ToString());
         }

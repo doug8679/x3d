@@ -39,9 +39,6 @@
         public void BooleanCasting()
         {
             var a = new SFBool();
-            var b = new SFBool(a);
-            var c = new SFBool(true);
-
             bool v = a;
             SFBool w = v;
 
