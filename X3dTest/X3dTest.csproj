@@ -61,6 +61,7 @@
     <Compile Include="Core\TestSFDouble.cs" />
     <Compile Include="Core\TestSFFloat.cs" />
     <Compile Include="Core\TestSFString.cs" />
+    <Compile Include="Core\TestSFTime.cs" />
     <Compile Include="Core\TestSFVec2f.cs" />
     <Compile Include="Core\TestSFVec2d.cs" />
     <Compile Include="Core\TestSFVec3d.cs" />

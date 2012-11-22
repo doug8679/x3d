@@ -46,6 +46,7 @@
     <Compile Include="Core\SFImage.cs" />
     <Compile Include="Core\SFInt32.cs" />
     <Compile Include="Core\SFString.cs" />
+    <Compile Include="Core\SFTime.cs" />
     <Compile Include="Core\SFVec2d.cs" />
     <Compile Include="Core\SFVec2f.cs" />
     <Compile Include="Core\SFVec3d.cs" />

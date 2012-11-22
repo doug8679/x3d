@@ -13,9 +13,8 @@
     {
         #region Constructors
 
-        public SFDouble()
+        public SFDouble() : this(0.0)
         {
-            this.Primitive = 0.0;
         }
 
         public SFDouble(double value)
