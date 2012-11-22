@@ -7,7 +7,8 @@
     public abstract class X3DVec2Field<TPrimitive> : X3DField
         where TPrimitive : X3DPrimitiveField, new()
     {
-        protected readonly int[] HashTablePrimeNumbers = new int[] { 73856093, 19349663, 83492791, 39916801 };
+        protected static readonly int[] HashTablePrimeNumbers 
+            = new int[] { 73856093, 19349663, 83492791, 39916801 };
 
         #region Constructors
 
