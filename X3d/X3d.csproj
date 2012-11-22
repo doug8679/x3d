@@ -43,6 +43,7 @@
     <Compile Include="Core\SFColorRGBA.cs" />
     <Compile Include="Core\SFDouble.cs" />
     <Compile Include="Core\SFFloat.cs" />
+    <Compile Include="Core\SFImage.cs" />
     <Compile Include="Core\SFInt32.cs" />
     <Compile Include="Core\SFString.cs" />
     <Compile Include="Core\SFVec2d.cs" />
