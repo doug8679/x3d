@@ -58,7 +58,11 @@
         /// Note that the first element of the second dimension (intensity value)
         /// is XY(0,0) which is bottom left of the image not top left.
         /// </param>
-        public SFImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
+        public SFImage(
+            SFImageComponentSize componentSize, 
+            int width, 
+            int height, 
+            byte[,] pixels)
         {
             this.UpdateImage(componentSize, width, height, pixels);
         }
@@ -79,7 +83,11 @@
 
         #region Image Data Management
 
-        public void UpdateImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
+        public void UpdateImage(
+            SFImageComponentSize componentSize, 
+            int width, 
+            int height, 
+            byte[,] pixels)
         {
             ValidateImage(componentSize, width, height, pixels);
 
@@ -89,19 +97,44 @@
             this.Pixels = pixels;
         }
 
-        private static void ValidateImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
+        private static void ValidateImage(
+            SFImageComponentSize componentSize, 
+            int width, 
+            int height, 
+            byte[,] pixels)
         {
-            if ((int)componentSize == 0 && pixels.GetLength(0) > 0)
+            
+            if (componentSize == SFImageComponentSize.Unknown)
             {
-                throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+                if (pixels != null)
+                {
+                    // Validation 1. When component is unknown, pixel should 
+                    // not have any elements in it.
+                    throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+                }
             }
-            else if ((int)componentSize != 0 && (pixels == null || (int)componentSize != pixels.GetLength(0)))
+            else
             {
-                throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
-            }
-            else if ((width * height) != pixels.GetLength(1))
-            {
-                throw new ArgumentException(string.Format("Image size and pixel data size are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+                if (pixels == null)
+                {
+                    // Validation 2. When component is specified, pixel
+                    // should not be NULL.
+                    throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = NULL", (int)componentSize));
+                }
+
+                if ((int)componentSize != pixels.GetLength(0))
+                {
+                    // Validation 3. When component is known, component 
+                    // size and 1D size must be matched.
+                    throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+                }
+
+                if ((int)(width * height) != pixels.GetLength(1))
+                {
+                    // Validation 4. When component is known, 
+                    // width x height and 2D size must be matched.
+                    throw new ArgumentException(string.Format("Image size and pixel data size are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+                }
             }
         }
 
@@ -119,16 +152,12 @@
             {
                 switch (this.ComponentSize)
                 {
-                    case SFImageComponentSize.Unknown:
-                        // Nothing to add
-                        break;
-
                     case SFImageComponentSize.Grayscale:
-                        GrayScaleToString(this, builder);
+                        GrayscaleToString(this, builder);
                         break;
 
                     case SFImageComponentSize.GrayscaleAlpha:
-                        GrayScaleAlphaToString(this, builder);
+                        GrayscaleAlphaToString(this, builder);
                         break;
 
                     case SFImageComponentSize.RGB:
@@ -138,28 +167,25 @@
                     case SFImageComponentSize.RGBA:
                         RGBAToString(this, builder);
                         break;
-
-                    default:
-                        throw new ArgumentOutOfRangeException();
                 }
             }
 
             return builder.ToString();
         }
 
-        private static void GrayScaleToString(SFImage obj, StringBuilder builder)
+        private static void GrayscaleToString(SFImage obj, StringBuilder builder)
         {
             for (var p = 0; p < obj.Width * obj.Height; p++)
             {
-                builder.AppendFormat(" 0x{0:x2}", obj.Pixels[0, p]);
+                builder.AppendFormat(" 0x{0:X2}", obj.Pixels[0, p]);
             }
         }
 
-        private static void GrayScaleAlphaToString(SFImage obj, StringBuilder builder)
+        private static void GrayscaleAlphaToString(SFImage obj, StringBuilder builder)
         {
             for (var p = 0; p < obj.Width * obj.Height; p++)
             {
-                builder.AppendFormat(" 0x{0:x2}{1:x2}", obj.Pixels[0, p], obj.Pixels[1, p]);
+                builder.AppendFormat(" 0x{0:X2}{1:X2}", obj.Pixels[0, p], obj.Pixels[1, p]);
             }
         }
 
@@ -167,7 +193,7 @@
         {
             for (var p = 0; p < obj.Width * obj.Height; p++)
             {
-                builder.AppendFormat(" 0x{0:x2}{1:x2}{2:x2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p]);
+                builder.AppendFormat(" 0x{0:X2}{1:X2}{2:X2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p]);
             }
         }
 
@@ -175,7 +201,7 @@
         {
             for (var p = 0; p < obj.Width * obj.Height; p++)
             {
-                builder.AppendFormat(" 0x{0:x2}{1:x2}{2:x2}{3:x2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p], obj.Pixels[3, p]);
+                builder.AppendFormat(" 0x{0:X2}{1:X2}{2:X2}{3:X2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p], obj.Pixels[3, p]);
             }
         }
 

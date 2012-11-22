@@ -56,6 +56,7 @@
     <Compile Include="Core\TestSFBool.cs" />
     <Compile Include="Core\TestSFColor.cs" />
     <Compile Include="Core\TestSFColorRGBA.cs" />
+    <Compile Include="Core\TestSFImage.cs" />
     <Compile Include="Core\TestSFInt32.cs" />
     <Compile Include="Core\TestSFDouble.cs" />
     <Compile Include="Core\TestSFFloat.cs" />
