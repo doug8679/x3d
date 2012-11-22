@@ -1,8 +1,9 @@
 ﻿namespace X3dTest.Core
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
-    using System.Globalization;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     using X3d.Core;
 
     /// <summary>
@@ -18,7 +19,7 @@
             var b = new SFTime(a);
             var c = new SFTime(123456.12345678901234);
 
-            Assert.IsTrue(Math.Abs(a + 1.0 ) < 0.000000000000001);
+            Assert.IsTrue(Math.Abs(a + 1.0) < 0.000000000000001);
             Assert.AreEqual(b, a);
             Assert.AreEqual(c, 123456.12345678901234);
             Assert.AreNotEqual(c, true);
