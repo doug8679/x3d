@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Linq;
     using System.Text;
 
@@ -80,7 +81,7 @@
 
         public void UpdateImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
         {
-            this.ValidateImage(componentSize, width, height, pixels);
+            ValidateImage(componentSize, width, height, pixels);
 
             this.ComponentSize = componentSize;
             this.Width = width;
@@ -88,16 +89,93 @@
             this.Pixels = pixels;
         }
 
-        private void ValidateImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
+        private static void ValidateImage(SFImageComponentSize componentSize, int width, int height, byte[,] pixels)
         {
-            if (((int)componentSize != 0 && pixels == null)
-             || ((int)componentSize != pixels.GetLength(0)))
+            if ((int)componentSize == 0 && pixels.GetLength(0) > 0)
+            {
+                throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+            }
+            else if ((int)componentSize != 0 && (pixels == null || (int)componentSize != pixels.GetLength(0)))
             {
                 throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
             }
             else if ((width * height) != pixels.GetLength(1))
             {
                 throw new ArgumentException(string.Format("Image size and pixel data size are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
+            }
+        }
+
+        #endregion
+
+        #region String compatibility
+
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
+
+            builder.Append(string.Format("{0} {1} {2}", (int)this.ComponentSize, Width, Height));
+
+            if (this.ComponentSize != SFImageComponentSize.Unknown && (Width * Height > 0))
+            {
+                switch (this.ComponentSize)
+                {
+                    case SFImageComponentSize.Unknown:
+                        // Nothing to add
+                        break;
+
+                    case SFImageComponentSize.Grayscale:
+                        GrayScaleToString(this, builder);
+                        break;
+
+                    case SFImageComponentSize.GrayscaleAlpha:
+                        GrayScaleAlphaToString(this, builder);
+                        break;
+
+                    case SFImageComponentSize.RGB:
+                        RGBToString(this, builder);
+                        break;
+
+                    case SFImageComponentSize.RGBA:
+                        RGBAToString(this, builder);
+                        break;
+
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+
+            return builder.ToString();
+        }
+
+        private static void GrayScaleToString(SFImage obj, StringBuilder builder)
+        {
+            for (var p = 0; p < obj.Width * obj.Height; p++)
+            {
+                builder.AppendFormat(" 0x{0:x2}", obj.Pixels[0, p]);
+            }
+        }
+
+        private static void GrayScaleAlphaToString(SFImage obj, StringBuilder builder)
+        {
+            for (var p = 0; p < obj.Width * obj.Height; p++)
+            {
+                builder.AppendFormat(" 0x{0:x2}{1:x2}", obj.Pixels[0, p], obj.Pixels[1, p]);
+            }
+        }
+
+        private static void RGBToString(SFImage obj, StringBuilder builder)
+        {
+            for (var p = 0; p < obj.Width * obj.Height; p++)
+            {
+                builder.AppendFormat(" 0x{0:x2}{1:x2}{2:x2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p]);
+            }
+        }
+
+        private static void RGBAToString(SFImage obj, StringBuilder builder)
+        {
+            for (var p = 0; p < obj.Width * obj.Height; p++)
+            {
+                builder.AppendFormat(" 0x{0:x2}{1:x2}{2:x2}{3:x2}", obj.Pixels[0, p], obj.Pixels[1, p], obj.Pixels[2, p], obj.Pixels[3, p]);
             }
         }
 
