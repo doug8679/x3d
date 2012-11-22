@@ -1,9 +1,6 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Linq;
     using System.Text;
 
     public enum SFImageComponentSize
@@ -100,10 +97,9 @@
         private static void ValidateImage(
             SFImageComponentSize componentSize, 
             int width, 
-            int height, 
+            int height,
             byte[,] pixels)
         {
-            
             if (componentSize == SFImageComponentSize.Unknown)
             {
                 if (pixels != null)
@@ -129,7 +125,7 @@
                     throw new ArgumentException(string.Format("Component type and pixel data are mismatched. Component Format = {0} and Pixel Format = {1}", (int)componentSize, pixels.GetLength(0)));
                 }
 
-                if ((int)(width * height) != pixels.GetLength(1))
+                if (width * height != pixels.GetLength(1))
                 {
                     // Validation 4. When component is known, 
                     // width x height and 2D size must be matched.

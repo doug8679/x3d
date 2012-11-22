@@ -35,6 +35,7 @@
             {
                 return this.Elements[0];
             }
+
             set
             {
                 this.Elements[0] = value;
@@ -47,6 +48,7 @@
             {
                 return this.Elements[1];
             }
+
             set
             {
                 this.Elements[1] = value;
@@ -59,10 +61,10 @@
 
         public override int GetHashCode()
         {
-            var xHash = this.X.GetHashCode() * HashTablePrimeNumbers[0];
-            var yHash = this.Y.GetHashCode() * HashTablePrimeNumbers[1];
+            var x = this.X.GetHashCode() * HashTablePrimeNumbers[0];
+            var y = this.Y.GetHashCode() * HashTablePrimeNumbers[1];
 
-            return (xHash ^ yHash);
+            return x ^ y;
         }
 
         public override bool Equals(object obj)
@@ -117,6 +119,7 @@
             {
                 return this.Elements[2];
             }
+
             set
             {
                 this.Elements[2] = value;
@@ -129,9 +132,9 @@
 
         public override int GetHashCode()
         {
-            var zHash = this.Z.GetHashCode() * HashTablePrimeNumbers[2];
+            var z = this.Z.GetHashCode() * HashTablePrimeNumbers[2];
 
-            return (base.GetHashCode() ^ zHash);
+            return base.GetHashCode() ^ z;
         }
 
         public override bool Equals(object obj)
@@ -202,9 +205,9 @@
 
         public override int GetHashCode()
         {
-            var hHash = this.Homegeneous.GetHashCode() * HashTablePrimeNumbers[3];
+            var h = this.Homegeneous.GetHashCode() * HashTablePrimeNumbers[3];
 
-            return (base.GetHashCode() ^ hHash);
+            return base.GetHashCode() ^ h;
         }
 
         public override bool Equals(object obj)

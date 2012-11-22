@@ -1,7 +1,6 @@
 ﻿namespace X3dTest.Core
 {
     using System;
-    using System.Collections.Generic;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -25,7 +24,7 @@
             const int width = 100;
             const int height = 100;
             var components = (int)size;
-            var pixels = new byte[components,(width * height)];
+            var pixels = new byte[components, (width * height)];
 
             for (var component = 0; component < components; component++)
             {
@@ -63,8 +62,8 @@
         {
             try
             {
-                var pixels = new byte[,] {{1, 2, 3, 4}};
-                var image = new SFImage(SFImageComponentSize.Unknown, 2, 2, pixels);
+                var pixels = new byte[,] { { 1, 2, 3, 4 } };
+                new SFImage(SFImageComponentSize.Unknown, 2, 2, pixels);
                 Assert.Fail();
             }
             catch (ArgumentException)
@@ -73,7 +72,7 @@
 
             try
             {
-                var image = new SFImage(SFImageComponentSize.Grayscale, 2, 2, null);
+                new SFImage(SFImageComponentSize.Grayscale, 2, 2, null);
                 Assert.Fail();
             }
             catch (ArgumentException)
@@ -83,7 +82,7 @@
             try
             {
                 var pixels = new byte[,] { { 1, 2, 3, 4 }, { 1, 2, 3, 4 } };
-                var image = new SFImage(SFImageComponentSize.Grayscale, 2, 2, pixels);
+                new SFImage(SFImageComponentSize.Grayscale, 2, 2, pixels);
                 Assert.Fail();
             }
             catch (ArgumentException)
@@ -93,7 +92,7 @@
             try
             {
                 var pixels = new byte[,] { { 1, 2, 3, 4 } };
-                var image = new SFImage(SFImageComponentSize.Grayscale, 4, 4, pixels);
+                new SFImage(SFImageComponentSize.Grayscale, 4, 4, pixels);
                 Assert.Fail();
             }
             catch (ArgumentException)
@@ -129,8 +128,6 @@
             image1 = new SFImage(SFImageComponentSize.RGBA, 2, 1, pixels);
 
             Assert.AreEqual(image1.ToString(), "4 2 1 0xFFFFFFFF 0xAAAAAAAA");
-
-
         }
     }
 }

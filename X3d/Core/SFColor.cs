@@ -1,7 +1,6 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.ComponentModel;
 
     /// <summary>
     /// The SFColor field specifies one RGB (red-green-blue) color triple.

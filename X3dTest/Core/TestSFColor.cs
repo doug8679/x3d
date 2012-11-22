@@ -32,7 +32,7 @@
         {
             try
             {
-                var a = new SFColor(1.01f, 0.0f, 0.0f);
+                new SFColor(1.01f, 0.0f, 0.0f);
                 Assert.Fail();
             }
             catch (ArgumentOutOfRangeException)
@@ -41,7 +41,7 @@
 
             try
             {
-                var a = new SFColor(-0.01f, 0.0f, 0.0f);
+                new SFColor(-0.01f, 0.0f, 0.0f);
                 Assert.Fail();
             }
             catch (ArgumentOutOfRangeException)
