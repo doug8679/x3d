@@ -15,16 +15,16 @@
     /// </summary>
     public class SFMatrix4f : X3DMatrixField<SFFloat>
     {
-        public static readonly SFMatrix4f Identity = new SFMatrix4f 
+        public static readonly SFFloat[,] Identity = new SFFloat[,]
         {
-            Elements = new SFFloat[,] { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } }
+            { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 }
         };
 
         #region Constructors
 
         public SFMatrix4f()
         {
-            this.Elements = Identity.Elements;
+            this.Elements = Identity;
         }
 
         public SFMatrix4f(SFFloat[,] elements)

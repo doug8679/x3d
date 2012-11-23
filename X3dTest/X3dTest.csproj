@@ -60,6 +60,10 @@
     <Compile Include="Core\TestSFInt32.cs" />
     <Compile Include="Core\TestSFDouble.cs" />
     <Compile Include="Core\TestSFFloat.cs" />
+    <Compile Include="Core\TestSFMatrix3d.cs" />
+    <Compile Include="Core\TestSFMatrix3f.cs" />
+    <Compile Include="Core\TestSFMatrix4d.cs" />
+    <Compile Include="Core\TestSFMatrix4f.cs" />
     <Compile Include="Core\TestSFString.cs" />
     <Compile Include="Core\TestSFTime.cs" />
     <Compile Include="Core\TestSFVec2f.cs" />

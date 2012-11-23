@@ -75,10 +75,12 @@
                 for (var col = 0; col < this.Elements.GetLength(1); col++)
                 {
                     builder.Append(this.Elements[row, col]);
+                    builder.Append(' ');
                 }
             }
 
-            return builder.ToString();
+
+            return builder.ToString().TrimEnd(' ');
         }
 
         #endregion

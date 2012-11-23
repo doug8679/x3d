@@ -16,7 +16,31 @@ namespace X3d.Core
     /// row. The default value of an uninitialized SFMatrix4d field is the 
     /// identity matrix [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1]. 
     /// </summary>
-    public class SFMatrix4d
+    public class SFMatrix4d : X3DMatrixField<SFDouble>
     {
+        public static readonly SFDouble[,] Identity = new SFDouble[,]
+        {
+            { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 }
+        };
+
+        #region Constructors
+
+        public SFMatrix4d()
+        {
+            this.Elements = Identity;
+        }
+
+        public SFMatrix4d(SFDouble[,] elements)
+            : this()
+        {
+            if (elements.GetLength(0) != 4 && elements.GetLength(1) != 4)
+            {
+                throw new ArgumentException(string.Format("Given matrix size is not 3 x 3. Matrix size = [{0} x {1}]", elements.GetLength(0), elements.GetLength(1)));
+            }
+
+            this.Elements = elements;
+        }
+
+        #endregion
     }
 }
