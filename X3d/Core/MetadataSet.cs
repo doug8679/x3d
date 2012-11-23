@@ -3,9 +3,7 @@
     using System.Collections.Generic;
     using System.Xml.Serialization;
 
-    public class MetadataSet : X3DMetadataObject, ChildContentModelCore
+    public class MetadataSet : X3DMetadataObject<List<ChildContentModelCore>>, ChildContentModelCore
     {
-        [XmlElement]
-        public List<ChildContentModelCore> ChildMetadata { get; set; }
     }
 }

@@ -105,6 +105,17 @@
 
     public class ExternProtoDeclare : X3DPrototype, ChildContentModelSceneGraphStructure
     {
+        [XmlElement(IsNullable = true)]
+        public List<Field> Fields { get; set; }
+
+        [XmlAttribute(AttributeName = "url")]
+        public MFString URL { get; set; }
+
+        [XmlAttribute(AttributeName = "appinfo")]
+        public SFString AppInfo { get; set; }
+
+        [XmlAttribute(AttributeName = "documentation")]
+        public SFString Documentation { get; set; }
     }
 
     public class Field : SceneGraphStructureNodeType
@@ -115,7 +126,17 @@
         [XmlAttribute(AttributeName = "name")]
         public NameToken Name { get; set; }
 
+        [XmlAttribute(AttributeName = "type")]
+        public AccessTypeNames Type { get; set; }
 
+        [XmlAttribute(AttributeName = "value")]
+        public SFString Value { get; set; }
+
+        [XmlAttribute(AttributeName = "appInfo")]
+        public SFString AppInfo { get; set; }
+
+        [XmlAttribute(AttributeName = "documentation")]
+        public SFString Documentation { get; set; }
     }
 
     [XmlType(TypeName = "accessTypeNames")]
@@ -134,16 +155,52 @@
         InputOutput
     }
 
-    public class ProtoDeclare : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    public class ProtoDeclare : X3DPrototype, ChildContentModelSceneGraphStructure
     {
+        [XmlElement(IsNullable = true, Order = 0)]
+        public ProtoInterface Interface { get; set; }
+
+        [XmlElement(Order = 1)]
+        public ProtoBody Body { get; set; }
+
+        [XmlAttribute(AttributeName = "appInfo")]
+        public SFString AppInfo { get; set; }
+
+        [XmlAttribute(AttributeName = "documentation")]
+        public SFString Documentation { get; set; }
+    }
+
+    public class ProtoInterface : SceneGraphStructureNodeType
+    {
+        [XmlElement(IsNullable = true)]
+        public List<Field> Fields { get; set; }
+    }
+
+    public class ProtoBody
+    {
+        [XmlElement(IsNullable = true)]
+        public List<SceneGraphFragmentWithPrototypeDeclarationsContentModel> ChildNodes { get; set; }
     }
 
     public class IMPORT : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
     {
+        [XmlElement(IsNullable = false)]
+        public SFString InlineDEF { get; set; }
+
+        [XmlElement(IsNullable = false)]
+        public NameToken ImportedDEF { get; set; }
+
+        [XmlElement(IsNullable = true)]
+        public SFString AS { get; set; }
     }
 
     public class EXPORT : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
     {
+        [XmlElement(IsNullable = false)]
+        public SFString LocalDEF { get; set; }
+
+        [XmlElement(IsNullable = true)]
+        public SFString AS { get; set; }
     }
 
     [XmlType(TypeName = "component")]

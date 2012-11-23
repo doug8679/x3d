@@ -21,6 +21,43 @@
         public SFString ContainerField { get; set; }
     }
 
+    public abstract class X3DPrototypeInstance : X3DNode
+    {
+    }
+
+    public abstract class X3DChildNode : X3DNode
+    {
+    }
+
+    public abstract class X3DBindableNode : X3DChildNode
+    {
+        public void SetBind(SFBool obj)
+        {
+        }
+
+        public SFTime BindTime { get; protected set; }
+
+        public SFBool IsBound { get; protected set; }
+    }
+
+    public abstract class X3DInfoNode : X3DChildNode
+    {
+    }
+
+    public abstract class X3DSensorNode : X3DChildNode
+    {
+        public SFBool Enabled { get; set; }
+
+        public SFBool IsActive { get; protected set; }
+    }
+
+    public class WorldInfo : X3DInfoNode
+    {
+        public MFString Info { get; set; }
+
+        public SFString Title { get; set; }
+    }
+
     public class Color : SceneGraphFragmentContentModel
     {
     }

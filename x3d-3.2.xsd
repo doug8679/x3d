@@ -4478,10 +4478,6 @@ X3D Schema version numbering:
 		</xs:choice>
 	</xs:group>
 	<xs:group name="GroupingNodeChildContentModel">
-		<xs:annotation>
-			<xs:appinfo>Child-node content model corresponding to X3DChildNode.  GroupingNodeChildContentModel can contain most nodes, other Grouping nodes, Prototype declarations and ProtoInstances in any order and any combination.  When less that Full profile, the precise palette of legal nodes that are available depends on profile and components.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#f-Objecthierarchy"/>
-		</xs:annotation>
 		<xs:choice>
 			<xs:sequence minOccurs="0" maxOccurs="unbounded">
 				<xs:group ref="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
@@ -6568,9 +6564,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="head">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/V3.2/Part01/concepts.html#Header"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">
@@ -6632,10 +6625,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ProtoInterface">
-		<xs:annotation>
-			<xs:appinfo>ProtoInterface defines fields for new Prototype nodes.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/v3.2/Part01/concepts.html#PrototypeAndFieldDeclarationSyntax"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">
@@ -6647,16 +6636,11 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ProtoBody">
-		<xs:annotation>
-			<xs:appinfo>ProtoBody contains the definition nodes for new Prototype nodes.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/v3.2/Part01/concepts.html#PrototypeAndFieldDeclarationSyntax"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">
 					<xs:sequence>
 						<xs:group ref="SceneGraphFragmentWithPrototypeDeclarationsContentModel" maxOccurs="unbounded"/>
-						<!-- nested ProtoDeclares, ProtoInstances are allowed by specification. -->
 					</xs:sequence>
 				</xs:extension>
 			</xs:complexContent>
@@ -6697,9 +6681,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="Scene">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/v3.2/Part01/concepts.html#Header"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">

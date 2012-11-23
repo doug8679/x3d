@@ -2,7 +2,7 @@
 {
     using System.Xml.Serialization;
 
-    public abstract class X3DMetadataObject : X3DNode
+    public abstract class X3DMetadataObject<MetadataType> : X3DNode
     {
         protected X3DMetadataObject()
         {
@@ -14,10 +14,6 @@
 
         [XmlAttribute(AttributeName = "reference")]
         public SFString Reference { get; set; }
-    }
-
-    public abstract class X3DMetadataObject<MetadataType> : X3DMetadataObject
-    {
         [XmlAttribute(AttributeName = "value")]
         public MetadataType Value { get; set; }
     }
