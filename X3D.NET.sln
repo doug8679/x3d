@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X3d", "X3d\X3d.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X3dTest", "X3dTest\X3dTest.csproj", "{479F84F8-FE68-43E9-9400-380DEDE1B7F1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X3D Schema", "X3D Schema", "{0F8F732B-D29D-44C9-98A4-079EC2AC1CE5}"
+	ProjectSection(SolutionItems) = preProject
+		x3d-3.2.xsd = x3d-3.2.xsd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

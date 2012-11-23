@@ -1,6 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
+    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFColor field specifies one RGB (red-green-blue) color triple.
@@ -8,6 +9,7 @@
     /// point numbers in the range 0.0 to 1.0. The default value of an
     /// uninitialized SFColor field is (0 0 0).
     /// </summary>
+    [XmlType(TypeName = "SFColor")]
     public class SFColor : SFVec3f
     {
         public SFColor()

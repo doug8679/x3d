@@ -1,6 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
+    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFColorRGBA field specifies one RGBA (red-green-blue-alpha) color
@@ -10,6 +11,7 @@
     /// transparent) to 1.0 (fully opaque). The default value of an uninitialized
     /// SFColorRGBA field is (0 0 0 0).
     /// </summary>
+    [XmlType(TypeName = "SFColorRGBA")]
     public class SFColorRGBA : SFVec4f
     {
         public SFColorRGBA()

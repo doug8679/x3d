@@ -2,6 +2,8 @@
 
 namespace X3d.Core
 {
+    using System.Xml.Serialization;
+
     /// <summary>
     /// The SFMatrix4d field specifies a 4×4 matrix of double-precision floating
     /// point numbers. Each floating point number is represented in the X3D file
@@ -13,6 +15,7 @@ namespace X3d.Core
     /// row. The default value of an uninitialized SFMatrix4d field is the
     /// identity matrix [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1].
     /// </summary>
+    [XmlType(TypeName = "SFMatrix4d")]
     public class SFMatrix4d : X3DMatrixField<SFDouble>
     {
         public static readonly SFDouble[,] Identity = new SFDouble[,]

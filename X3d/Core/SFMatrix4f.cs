@@ -1,6 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
+    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFMatrix4f field specifies a 4x4 matrix of single-precision floating
@@ -13,6 +14,7 @@
     /// row. The default value of an uninitialized SFMatrix4f field is the
     /// identity matrix [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1].
     /// </summary>
+    [XmlType(TypeName = "SFMatrix4f")]
     public class SFMatrix4f : X3DMatrixField<SFFloat>
     {
         public static readonly SFFloat[,] Identity = new SFFloat[,]
