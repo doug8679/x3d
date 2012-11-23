@@ -59,6 +59,7 @@
     <Compile Include="Core\SFVec3f.cs" />
     <Compile Include="Core\SFVec4d.cs" />
     <Compile Include="Core\SFVec4f.cs" />
+    <Compile Include="Core\X3DArrayField.cs" />
     <Compile Include="Core\X3DMatrixField.cs" />
     <Compile Include="Core\X3DPrimitiveField.cs" />
     <Compile Include="Core\SFBool.cs" />
