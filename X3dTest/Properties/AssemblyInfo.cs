@@ -1,24 +1,15 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AssemblyInfo.cs" company="X3D.NET">
-//   X3D Package Assembly Information
-// </copyright>
-// <summary>
-//
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("X3D.NET Library")]
-[assembly: AssemblyDescription("X3D.NET Library")]
+[assembly: AssemblyTitle("X3dTest")]
+[assembly: AssemblyDescription("X3D.NET Unit Test")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("http://x3d.codeplex.com/")]
-[assembly: AssemblyProduct("X3D.NET Library")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("https://x3d.codeplex.com")]
+[assembly: AssemblyProduct("X3D.NET Unit Test")]
+[assembly: AssemblyCopyright("Copyright © 2012 X3D.NET")]
 [assembly: AssemblyTrademark("X3D.NET")]
 [assembly: AssemblyCulture("")]
 
@@ -28,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("40f0ff62-bf60-420e-9ff8-96ae1d28d3dd")]
+[assembly: Guid("d988ca21-56e7-4161-9c43-6133d8b081e8")]
 
 // Version information for an assembly consists of the following four values:
 //

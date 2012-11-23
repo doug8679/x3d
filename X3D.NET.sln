@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X3d", "X3d\X3d.csproj", "{0F861C52-3F9A-4381-B676-CF8202ED232A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X3dTest", "X3dTest\X3dTest.csproj", "{479F84F8-FE68-43E9-9400-380DEDE1B7F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{0F861C52-3F9A-4381-B676-CF8202ED232A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F861C52-3F9A-4381-B676-CF8202ED232A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F861C52-3F9A-4381-B676-CF8202ED232A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479F84F8-FE68-43E9-9400-380DEDE1B7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479F84F8-FE68-43E9-9400-380DEDE1B7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479F84F8-FE68-43E9-9400-380DEDE1B7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479F84F8-FE68-43E9-9400-380DEDE1B7F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

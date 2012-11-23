@@ -3,3 +3,8 @@
 /X3D.NET.v11.suo
 /X3d/obj
 /X3d/bin
+/X3dTest/obj
+/X3dTest/bin
+/X3d/*.Cache
+/X3dTest/*.Cache
+/*.user
