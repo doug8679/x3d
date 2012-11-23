@@ -28,7 +28,7 @@
 
         #region Vector Element Accessors
 
-        public TPrimitive[] Elements { get; set; }
+        public TPrimitive[] Elements { get; protected set; }
 
         public TPrimitive X
         {

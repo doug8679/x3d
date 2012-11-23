@@ -46,6 +46,9 @@
     <Compile Include="Core\SFImage.cs" />
     <Compile Include="Core\SFInt32.cs" />
     <Compile Include="Core\SFMatrix3d.cs" />
+    <Compile Include="Core\SFMatrix3f.cs" />
+    <Compile Include="Core\SFMatrix4d.cs" />
+    <Compile Include="Core\SFMatrix4f.cs" />
     <Compile Include="Core\SFNode.cs" />
     <Compile Include="Core\SFString.cs" />
     <Compile Include="Core\SFTime.cs" />
