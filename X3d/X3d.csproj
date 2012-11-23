@@ -50,6 +50,7 @@
     <Compile Include="Core\SFMatrix4d.cs" />
     <Compile Include="Core\SFMatrix4f.cs" />
     <Compile Include="Core\SFNode.cs" />
+    <Compile Include="Core\SFRotation.cs" />
     <Compile Include="Core\SFString.cs" />
     <Compile Include="Core\SFTime.cs" />
     <Compile Include="Core\SFVec2d.cs" />

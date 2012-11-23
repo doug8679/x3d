@@ -64,6 +64,7 @@
     <Compile Include="Core\TestSFMatrix3f.cs" />
     <Compile Include="Core\TestSFMatrix4d.cs" />
     <Compile Include="Core\TestSFMatrix4f.cs" />
+    <Compile Include="Core\TestSFRotation.cs" />
     <Compile Include="Core\TestSFString.cs" />
     <Compile Include="Core\TestSFTime.cs" />
     <Compile Include="Core\TestSFVec2f.cs" />
