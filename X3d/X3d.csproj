@@ -66,13 +66,19 @@
     <Compile Include="Core\SFVec3f.cs" />
     <Compile Include="Core\SFVec4d.cs" />
     <Compile Include="Core\SFVec4f.cs" />
+    <Compile Include="Core\WorldInfo.cs" />
     <Compile Include="Core\X3DArrayField.cs" />
+    <Compile Include="Core\X3DBindableNode.cs" />
+    <Compile Include="Core\X3DChildNode.cs" />
+    <Compile Include="Core\X3DInfoNode.cs" />
     <Compile Include="Core\X3DMatrixField.cs" />
     <Compile Include="Core\X3DMetadataObject.cs" />
     <Compile Include="Core\X3DNode.cs" />
     <Compile Include="Core\X3DPrimitiveField.cs" />
     <Compile Include="Core\SFBool.cs" />
     <Compile Include="Core\X3DField.cs" />
+    <Compile Include="Core\X3DPrototypeInstance.cs" />
+    <Compile Include="Core\X3DSensorNode.cs" />
     <Compile Include="Core\X3DVectorField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

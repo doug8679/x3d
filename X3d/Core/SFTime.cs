@@ -1,5 +1,6 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -15,10 +16,11 @@
     [XmlType(TypeName = "SFTime")]
     public class SFTime : SFDouble
     {
+        public static readonly DateTime Zero = new DateTime(1970, 1, 1);
+
         #region Constructors
 
-        public SFTime()
-            : this(-1.0)
+        public SFTime() : this(-1.0)
         {
         }
 
@@ -33,5 +35,29 @@
         }
 
         #endregion Constructors
+
+        #region DateTime Compatiblity
+
+        public static implicit operator SFTime(double value)
+        {
+            return new SFTime(value);    
+        }
+
+        public static implicit operator SFTime(DateTime obj)
+        {
+            return new SFTime((obj - Zero).TotalSeconds);
+        }
+
+        public static implicit operator double(SFTime obj)
+        {
+            return obj.Primitive;
+        }
+
+        public static implicit operator DateTime(SFTime obj)
+        {
+            return new DateTime(1970, 1, 1).AddSeconds(obj.Primitive);    
+        }
+
+        #endregion
     }
 }

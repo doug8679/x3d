@@ -1,6 +1,11 @@
 ﻿namespace X3d.Core
 {
-    public class MetadataString : X3DMetadataObject<MFString>, ChildContentModelCore
+    /// <summary>
+    /// The metadata provided by this node is contained in the strings of 
+    /// the value field.
+    /// </summary>
+    public class MetadataString 
+        : X3DMetadataObject<MFString>, ChildContentModelCore
     {
     }
 }
