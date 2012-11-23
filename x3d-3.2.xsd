@@ -524,10 +524,6 @@ X3D Schema version numbering:
 	<!--Enumerations-->
 	<!--Profiles correspond primarily to subsets of nodes. Some nodes in Interchange profile include fields that are ignored unless Immersive or Full profile is active.-->
 	<xs:simpleType name="accessTypeNames">
-		<xs:annotation>
-			<xs:appinfo>accessTypeNames are allowed enumeration values for accessType.  Prior names in VRML 97 were eventIn, eventOut, field, exposedField respectively.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#FieldSemantics"/>
-		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="initializeOnly"/>
 			<xs:enumeration value="inputOnly"/>
@@ -1422,26 +1418,11 @@ X3D Schema version numbering:
 	<!--Attribute groups-->
 	<!--DEF and USE are node-naming attributes common to all instantiable nodes. This attributeGroup is defined for all top-level node types in the node interface hierarchy.-->
 	<xs:attributeGroup name="DEF_USE">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#DEFL_USESemantics"/>
-		</xs:annotation>
-		<xs:attribute name="DEF" type="xs:ID">
-			<xs:annotation>
-				<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#DEFL_USESemantics"/>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="USE" type="xs:IDREF">
-			<xs:annotation>
-				<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#DEFL_USESemantics"/>
-			</xs:annotation>
-		</xs:attribute>
+		<xs:attribute name="DEF" type="xs:ID"/>
+		<xs:attribute name="USE" type="xs:IDREF"/>
 	</xs:attributeGroup>
 	<xs:attributeGroup name="globalAttributes">
-		<xs:attribute name="class" type="xs:NMTOKENS">
-			<xs:annotation>
-				<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/V3.2/Part01/concepts.html#ClassAttributeSyntax"/>
-			</xs:annotation>
-		</xs:attribute>
+		<xs:attribute name="class" type="xs:NMTOKENS"/>
 		<!-- containerField not included here in globalAttributes since default values are different for various node types -->
 	</xs:attributeGroup>
 	<!--======================================================================-->
@@ -1716,17 +1697,11 @@ X3D Schema version numbering:
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="X3DMetadataObject">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#X3DMetadataObject"/>
-		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="X3DNode">
 				<xs:attribute name="name" type="SFString"/>
 				<xs:attribute name="reference" type="SFString"/>
 				<xs:attribute name="containerField" type="xs:NMTOKEN" default="metadata">
-					<xs:annotation>
-						<xs:appinfo>containerField='value' for contained payload metadata inside MetadataSet element.</xs:appinfo>
-					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
@@ -1740,17 +1715,12 @@ X3D Schema version numbering:
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="X3DNode" abstract="true" mixed="false">
-		<xs:annotation>
-			<xs:appinfo>All instantiable nodes implement X3DNode, which corresponds to SFNode in the VRML 97 specification.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#X3DNode"/>
-		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="IS" minOccurs="0"/>
 			<xs:group ref="ChildContentModelCore" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="DEF_USE"/>
 		<xs:attributeGroup ref="globalAttributes"/>
-		<!-- complexContent, extension/restriction not used since X3DNode is a top-level node type -->
 	</xs:complexType>
 	<xs:complexType name="X3DNodeMixedContent" abstract="true" mixed="true">
 		<xs:annotation>
@@ -2087,9 +2057,6 @@ X3D Schema version numbering:
    	</xs:complexType>
    	-->
 	<xs:complexType name="X3DPrototype" abstract="true" mixed="false">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#PrototypeSemantics"/>
-		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="SceneGraphStructureNodeType">
 				<xs:attribute name="name" type="xs:NMTOKEN" use="required"/>
@@ -2450,10 +2417,6 @@ X3D Schema version numbering:
 		</xs:choice>
 	</xs:group>
 	<xs:group name="ChildContentModelSceneGraphStructure">
-		<xs:annotation>
-			<xs:appinfo>Child-node content model corresponding to SceneGraphStructure elements, which are not specific X3D nodes.</xs:appinfo>
-			<xs:documentation/>
-		</xs:annotation>
 		<xs:choice>
 			<xs:element ref="ROUTE"/>
 			<xs:element ref="ExternProtoDeclare"/>
@@ -5709,12 +5672,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="MetadataSet">
-		<xs:annotation>
-			<xs:appinfo>
-				<xs:attribute name="otherInterfaces" type="xs:string" fixed="X3DMetadataObject"/>
-			</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataSet"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">
@@ -5727,12 +5684,8 @@ X3D Schema version numbering:
 					<xs:attribute name="name" type="SFString"/>
 					<xs:attribute name="reference" type="SFString"/>
 					<xs:attribute name="containerField" type="xs:NMTOKEN" default="metadata">
-						<xs:annotation>
-							<xs:appinfo>containerField='value' for contained payload metadata inside MetadataSet element.</xs:appinfo>
-						</xs:annotation>
 					</xs:attribute>
 				</xs:extension>
-				<!-- Workaround to fix content-model collision: X3DMetadataObject allows multiple child Metadata nodes, but X3DMetadataNode content model can't be restricted/further -->
 			</xs:complexContent>
 		</xs:complexType>
 	</xs:element>
@@ -6581,10 +6534,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="field">
-		<xs:annotation>
-			<xs:appinfo>field can contain either attribute-value or node content.  field is used by ExternProtoDeclare, ProtoDeclare and Script nodes.</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19776-1/v3.2/Part01/concepts.html#NodeAndFieldStatementSyntax"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">
@@ -6651,9 +6600,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ExternProtoDeclare">
-		<xs:annotation>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#Externalprototypesemantics"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="X3DPrototype">
@@ -6739,12 +6685,6 @@ X3D Schema version numbering:
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ROUTE">
-		<xs:annotation>
-			<xs:appinfo>ROUTEs connect event-producing nodes/fields to event-consuming nodes/fields.
-                <xs:attribute name="otherInterfaces" type="xs:string" fixed="X3DChildNode"/>
-			</xs:appinfo>
-			<xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#ModifyingObjectsRoutes"/>
-		</xs:annotation>
 		<xs:complexType>
 			<xs:complexContent>
 				<xs:extension base="SceneGraphStructureNodeType">

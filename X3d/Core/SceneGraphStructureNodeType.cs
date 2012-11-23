@@ -57,10 +57,10 @@
         [XmlElement(IsNullable = false, Order = 1)]
         public Scene Scene { get; set; }
 
-        [XmlAttribute]
+        [XmlAttribute(AttributeName = "version")]
         public X3DVersion Version { get; set; }
 
-        [XmlAttribute]
+        [XmlAttribute(AttributeName = "profile")]
         public ProfileNames Profile { get; set; }
     }
 
@@ -77,11 +77,77 @@
     [XmlType(TypeName = "Scene")]
     public class Scene : SceneGraphStructureNodeType
     {
-        // TODO : Implement this
+        [XmlElement(IsNullable = true)]
+        public List<SceneChildContentModel> ChildNodes { get; set; }
+    }
+
+    [XmlType(TypeName = "ROUTE")]
+    public class ROUTE : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    {
+        [XmlAttribute(AttributeName = "fromNode")]
+        public SFString FromNode { get; set; }
+
+        [XmlAttribute(AttributeName = "fromField")]
+        public NameToken FromField { get; set; }
+
+        [XmlAttribute(AttributeName = "toNode")]
+        public SFString ToNode { get; set; }
+
+        [XmlAttribute(AttributeName = "toField")]
+        public NameToken ToField { get; set; }
+    }
+
+    public class X3DPrototype : SceneGraphStructureNodeType
+    {
+        [XmlAttribute(AttributeName = "name")]
+        public NameToken Name { get; set; }
+    }
+
+    public class ExternProtoDeclare : X3DPrototype, ChildContentModelSceneGraphStructure
+    {
+    }
+
+    public class Field : SceneGraphStructureNodeType
+    {
+        [XmlElement(IsNullable = true)]
+        public List<SceneGraphFragmentContentModel> ChildInstance { get; set; }
+
+        [XmlAttribute(AttributeName = "name")]
+        public NameToken Name { get; set; }
+
+
+    }
+
+    [XmlType(TypeName = "accessTypeNames")]
+    public enum AccessTypeNames
+    {
+        [XmlEnum(Name = "InitializeOnly")]
+        InitializeOnly,
+
+        [XmlEnum(Name = "InputOnly")]
+        InputOnly,
+
+        [XmlEnum(Name = "OutputOnly")]
+        OutputOnly,
+
+        [XmlEnum(Name = "InputOutput")]
+        InputOutput
+    }
+
+    public class ProtoDeclare : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    {
+    }
+
+    public class IMPORT : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    {
+    }
+
+    public class EXPORT : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    {
     }
 
     [XmlType(TypeName = "component")]
-    public class Component
+    public class Component : SceneGraphStructureNodeType
     {
         [XmlAttribute(AttributeName = "name")]
         public ComponentNames Name { get; set; }
@@ -108,8 +174,29 @@
         }
     }
 
+    [XmlType(TypeName = "IS")]
+    public class IS : SceneGraphStructureNodeType
+    {
+        public List<Connect> Connections { get; set; }
+    }
+
+    [XmlType(TypeName = "connect")]
+    public class Connect : SceneGraphStructureNodeType
+    {
+        [XmlAttribute(AttributeName = "nodeField")]
+        public NameToken NodeField { get; set; }
+
+        [XmlAttribute(AttributeName = "protoField")]
+        public NameToken ProtoField { get; set; }
+    }
+
+    [XmlType(TypeName = "xs:NMTOKEN")]
+    public class NameToken : SFString
+    {
+    }
+
     [XmlType(TypeName = "meta")]
-    public class Meta
+    public class Meta : SceneGraphStructureNodeType
     {
         [XmlAttribute(AttributeName = "name")]
         public SFString Name { get; set; }
