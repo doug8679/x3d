@@ -13,7 +13,8 @@
     {
         #region Constructors
 
-        public SFDouble() : this(0.0)
+        public SFDouble()
+            : this(0.0)
         {
         }
 

@@ -3,16 +3,16 @@
     using System;
 
     /// <summary>
-    /// The SFColorRGBA field specifies one RGBA (red-green-blue-alpha) color 
+    /// The SFColorRGBA field specifies one RGBA (red-green-blue-alpha) color
     /// quadruple that includes alpha (opacity) information. Each color is
-    ///  written to the X3D file as an RGBA quadruple of floating point 
-    /// numbers in the range 0.0 to 1.0. Alpha values range from 0.0 (fully 
+    ///  written to the X3D file as an RGBA quadruple of floating point
+    /// numbers in the range 0.0 to 1.0. Alpha values range from 0.0 (fully
     /// transparent) to 1.0 (fully opaque). The default value of an uninitialized
     /// SFColorRGBA field is (0 0 0 0).
     /// </summary>
     public class SFColorRGBA : SFVec4f
     {
-        public SFColorRGBA() 
+        public SFColorRGBA()
             : base(0, 0, 0, 0)
         {
         }

@@ -1,9 +1,7 @@
 ﻿namespace X3dTest.Core
 {
-    using System;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using System;
     using X3d.Core;
 
     /// <summary>
@@ -37,7 +35,7 @@
             return new SFImage(size, width, height, pixels);
         }
 
-        #endregion
+        #endregion Test Image Generation
 
         [TestMethod]
         public void Constructor()

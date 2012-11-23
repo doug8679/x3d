@@ -1,8 +1,5 @@
 ﻿namespace X3d.Core
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
 
     public abstract class X3DMatrixField<TPrimitive> : X3DField
@@ -12,7 +9,7 @@
 
         public TPrimitive[,] Elements { get; protected set; }
 
-        #endregion
+        #endregion Matrix Element Accessors
 
         #region Object Equality
 
@@ -62,7 +59,7 @@
             return false;
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
@@ -79,10 +76,9 @@
                 }
             }
 
-
             return builder.ToString().TrimEnd(' ');
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 }

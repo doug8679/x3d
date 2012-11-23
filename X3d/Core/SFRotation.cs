@@ -2,10 +2,10 @@
 {
     /// <summary>
     /// The SFRotation field specifies one arbitrary rotation. An SFRotation is
-    /// written to the X3D file as four floating point values. The allowable 
-    /// form for a floating point number is defined in the specific encoding. 
-    /// The first three values specify a normalized rotation axis vector about 
-    /// which the rotation takes place. The fourth value specifies the amount 
+    /// written to the X3D file as four floating point values. The allowable
+    /// form for a floating point number is defined in the specific encoding.
+    /// The first three values specify a normalized rotation axis vector about
+    /// which the rotation takes place. The fourth value specifies the amount
     /// of right-handed rotation about that axis in radians.
     /// </summary>
     public class SFRotation : SFVec3f
@@ -23,7 +23,7 @@
             this.Angle = new SFFloat(angel);
         }
 
-        #endregion
+        #endregion Constructors
 
         public SFFloat Angle { get; set; }
 
@@ -51,7 +51,7 @@
             return false;
         }
 
-        #endregion
+        #endregion Object Equality
 
         #region String Compatibility
 
@@ -60,6 +60,6 @@
             return string.Format("{0} {1} {2} {3}", this.X, this.Y, this.Z, this.Angle);
         }
 
-        #endregion
+        #endregion String Compatibility
     }
 }

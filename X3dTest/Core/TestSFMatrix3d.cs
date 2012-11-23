@@ -1,9 +1,7 @@
 ﻿namespace X3dTest.Core
 {
-    using System;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using System;
     using X3d.Core;
 
     /// <summary>

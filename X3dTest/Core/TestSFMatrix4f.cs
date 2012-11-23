@@ -1,9 +1,7 @@
 ﻿namespace X3dTest.Core
 {
-    using System;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using System;
     using X3d.Core;
 
     /// <summary>
@@ -36,7 +34,7 @@
             Assert.IsTrue(Math.Abs(mat.Elements[3, 2] - 0) < EPSILON);
             Assert.IsTrue(Math.Abs(mat.Elements[3, 3] - 1) < EPSILON);
 
-            var elements = new SFFloat[,] { { 1, 1, 1, 1 }, { 0, 0, 0, 0 }, { -1, -1, -1, -1 }, {0, 0, 0, 0} };
+            var elements = new SFFloat[,] { { 1, 1, 1, 1 }, { 0, 0, 0, 0 }, { -1, -1, -1, -1 }, { 0, 0, 0, 0 } };
             mat = new SFMatrix4f(elements);
 
             Assert.IsTrue(Math.Abs(mat.Elements[0, 0] - 1) < EPSILON);

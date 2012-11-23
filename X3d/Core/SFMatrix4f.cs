@@ -5,12 +5,12 @@
     /// <summary>
     /// The SFMatrix4f field specifies a 4x4 matrix of single-precision floating
     /// point numbers. Each floating point number is represented in the X3D file
-    /// as specified in the respective encoding. SFMatrix4f matrices are 
-    /// organized in row-major fashion. The first row of the matrix stores 
-    /// information for the x dimension, the second for the y dimension, and 
-    /// the third for the z dimension. Since these data types are commonly used 
-    /// for transformation matrices, translation values are stored in the fourth 
-    /// row. The default value of an uninitialized SFMatrix4f field is the 
+    /// as specified in the respective encoding. SFMatrix4f matrices are
+    /// organized in row-major fashion. The first row of the matrix stores
+    /// information for the x dimension, the second for the y dimension, and
+    /// the third for the z dimension. Since these data types are commonly used
+    /// for transformation matrices, translation values are stored in the fourth
+    /// row. The default value of an uninitialized SFMatrix4f field is the
     /// identity matrix [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1].
     /// </summary>
     public class SFMatrix4f : X3DMatrixField<SFFloat>
@@ -38,6 +38,6 @@
             this.Elements = elements;
         }
 
-        #endregion
+        #endregion Constructors
     }
 }

@@ -4,12 +4,12 @@
 
     /// <summary>
     /// The SFMatrix3f field specifies a 3×3 matrix of single-precision floating
-    /// point numbers. Each floating point number is represented in the X3D file 
-    /// as specified in the respective encoding. SFMatrix3f matrices are 
-    /// organized in row-major fashion. The first row of the matrix stores 
-    /// information for the x dimension, and the second for the y dimension. 
-    /// Since these data types are commonly used for transformation matrices, 
-    /// translation values are stored in the third row. The default value of an 
+    /// point numbers. Each floating point number is represented in the X3D file
+    /// as specified in the respective encoding. SFMatrix3f matrices are
+    /// organized in row-major fashion. The first row of the matrix stores
+    /// information for the x dimension, and the second for the y dimension.
+    /// Since these data types are commonly used for transformation matrices,
+    /// translation values are stored in the third row. The default value of an
     /// uninitialized SFMatrix3f field is the identity matrix [1 0 0 0 1 0 0 0 1].
     /// </summary>
     public class SFMatrix3f : X3DMatrixField<SFFloat>
@@ -37,6 +37,6 @@
             this.Elements = elements;
         }
 
-        #endregion
+        #endregion Constructors
     }
 }
