@@ -39,12 +39,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backlog\Working.cs" />
+    <Compile Include="Core\AccessTypeNames.cs" />
+    <Compile Include="Core\Component.cs" />
+    <Compile Include="Core\ComponentNames.cs" />
+    <Compile Include="Core\EXPORT.cs" />
+    <Compile Include="Core\ExternProtoDeclare.cs" />
+    <Compile Include="Core\Field.cs" />
     <Compile Include="Core\GroupDefinitions.cs" />
+    <Compile Include="Core\Head.cs" />
+    <Compile Include="Core\IMPORT.cs" />
+    <Compile Include="Core\IS.cs" />
+    <Compile Include="Core\Meta.cs" />
     <Compile Include="Core\MetadataDouble.cs" />
     <Compile Include="Core\MetadataFloat.cs" />
     <Compile Include="Core\MetadataInteger.cs" />
     <Compile Include="Core\MetadataSet.cs" />
     <Compile Include="Core\MetadataString.cs" />
+    <Compile Include="Core\MetaDirectionValues.cs" />
+    <Compile Include="Core\NameToken.cs" />
+    <Compile Include="Core\ProfileName.cs" />
+    <Compile Include="Core\ProtoBody.cs" />
+    <Compile Include="Core\ProtoDeclare.cs" />
+    <Compile Include="Core\ProtoInterface.cs" />
+    <Compile Include="Core\ROUTE.cs" />
+    <Compile Include="Core\Scene.cs" />
     <Compile Include="Core\SceneGraphStructureNodeType.cs" />
     <Compile Include="Core\SFColor.cs" />
     <Compile Include="Core\SFColorRGBA.cs" />
@@ -67,6 +86,7 @@
     <Compile Include="Core\SFVec4d.cs" />
     <Compile Include="Core\SFVec4f.cs" />
     <Compile Include="Core\WorldInfo.cs" />
+    <Compile Include="Core\X3D.cs" />
     <Compile Include="Core\X3DArrayField.cs" />
     <Compile Include="Core\X3DBindableNode.cs" />
     <Compile Include="Core\X3DChildNode.cs" />
@@ -77,9 +97,11 @@
     <Compile Include="Core\X3DPrimitiveField.cs" />
     <Compile Include="Core\SFBool.cs" />
     <Compile Include="Core\X3DField.cs" />
+    <Compile Include="Core\X3DPrototype.cs" />
     <Compile Include="Core\X3DPrototypeInstance.cs" />
     <Compile Include="Core\X3DSensorNode.cs" />
     <Compile Include="Core\X3DVectorField.cs" />
+    <Compile Include="Core\X3DVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +139,9 @@
     <Folder Include="Text\" />
     <Folder Include="Time\" />
     <Folder Include="VolumeRendering\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X3D.NET Core.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

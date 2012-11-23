@@ -11,18 +11,13 @@
     /// meaning of the name field is considered implicit to the characters 
     /// in the string.
     /// </summary>
-    /// <typeparam name="MetadataType">
-    /// Metadata Specialization Type
-    /// </typeparam>
-    public abstract class X3DMetadataObject<MetadataType> : X3DNode
-        where MetadataType : new()
+    public abstract class X3DMetadataObject : X3DNode
     {
         protected X3DMetadataObject()
         {
             this.ContainerField = new SFString("metadata");
             this.Name = string.Empty;
             this.Reference = string.Empty;
-            this.Value = new MetadataType();
         }
 
         [XmlAttribute(AttributeName = "name")]
@@ -30,6 +25,15 @@
 
         [XmlAttribute(AttributeName = "reference")]
         public SFString Reference { get; set; }
+    }
+
+    public abstract class X3DMetadataObject<MetadataType> : X3DMetadataObject
+        where MetadataType : new()
+    {
+        protected X3DMetadataObject() : base()
+        {
+            this.Value = new MetadataType();
+        }
 
         [XmlAttribute(AttributeName = "value")]
         public MetadataType Value { get; set; }

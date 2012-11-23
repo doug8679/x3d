@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X3D Schema", "X3D Schema", 
 		x3d-3.2.xsd = x3d-3.2.xsd
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X3D.NET Architecture", "X3D.NET Architecture", "{84BEFDFD-4789-48D9-B763-5508F2559691}"
+	ProjectSection(SolutionItems) = preProject
+		X3d\X3D.NET Core.cd = X3d\X3D.NET Core.cd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
