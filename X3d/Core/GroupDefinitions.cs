@@ -1,5 +1,7 @@
 ﻿namespace X3d.Core
 {
+    using System;
+
     /* Extra node groups grouping the virtual node groups below */
 
     public interface SceneChildContentModel { }

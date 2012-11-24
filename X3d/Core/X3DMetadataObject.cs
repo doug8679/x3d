@@ -11,7 +11,7 @@
     /// meaning of the name field is considered implicit to the characters 
     /// in the string.
     /// </summary>
-    public abstract class X3DMetadataObject : X3DNode
+    public abstract class X3DMetadataObject : X3DNode, ChildContentModelCore
     {
         protected X3DMetadataObject()
         {
@@ -20,10 +20,12 @@
             this.Reference = string.Empty;
         }
 
-        [XmlAttribute(AttributeName = "name")]
+        //[XmlAttribute(AttributeName = "name")]
+        [XmlIgnore]
         public SFString Name { get; set; }
 
-        [XmlAttribute(AttributeName = "reference")]
+        //[XmlAttribute(AttributeName = "reference")]
+        [XmlIgnore]
         public SFString Reference { get; set; }
     }
 
@@ -35,7 +37,8 @@
             this.Value = new MetadataType();
         }
 
-        [XmlAttribute(AttributeName = "value")]
+        //[XmlAttribute(AttributeName = "value")]
+        [XmlIgnore]
         public MetadataType Value { get; set; }
     }
 }

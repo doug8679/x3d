@@ -127,5 +127,22 @@
 
             Serialize(file, x3d);
         }
+
+        [TestMethod]
+        public void Serialization_MetaDataObjects()
+        {
+            const string file = @"..\..\..\Sample\Core\metadata.x3d";
+
+            var x3d = new X3D();
+            var scene = x3d.Scene;
+
+            var meta1 = new MetadataDouble();
+            var meta2 = new MetadataFloat();
+
+            scene.ChildNodes.Add(meta1);
+            scene.ChildNodes.Add(meta2);
+
+            Serialize(file, x3d);
+        }
     }
 }

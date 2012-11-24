@@ -100,6 +100,7 @@
     <Compile Include="Core\X3DPrototype.cs" />
     <Compile Include="Core\X3DPrototypeInstance.cs" />
     <Compile Include="Core\X3DSensorNode.cs" />
+    <Compile Include="Core\X3DSerializable.cs" />
     <Compile Include="Core\X3DVectorField.cs" />
     <Compile Include="Core\X3DVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
