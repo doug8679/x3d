@@ -42,5 +42,14 @@
         }
 
         #endregion Boolean Compatibility
+
+        #region String Compatiblity
+
+        public override string ToString()
+        {
+            return base.ToString().ToLower();
+        }
+
+        #endregion
     }
 }
