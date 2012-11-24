@@ -6,12 +6,25 @@
     [XmlType(TypeName = "component")]
     public class Component : SceneGraphStructureNodeType
     {
+        public Component()
+        {
+            this.Name = ComponentNames.Core;
+            this.Level = 1;
+        }
+
+        public Component(ComponentNames name, SFInt32 level)
+        {
+            this.Name = name;
+            this.Level = level;
+        }
+
         [XmlAttribute(AttributeName = "name")]
         public ComponentNames Name { get; set; }
 
+        [XmlIgnore]
         private SFInt32 level;
 
-        [XmlAttribute(AttributeName = "level")]
+        [XmlIgnore]
         public SFInt32 Level
         {
             get
@@ -27,6 +40,20 @@
                 }
 
                 this.level = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "level")]
+        public string LevelString
+        {
+            get
+            {
+                return this.level.ToString();
+            }
+
+            set
+            {
+                
             }
         }
     }

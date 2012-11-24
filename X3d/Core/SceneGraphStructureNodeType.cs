@@ -2,8 +2,7 @@
 {
     using System.Xml.Serialization;
 
-    [XmlType(TypeName = "SceneGraphStructureNodeType")]
-    public class SceneGraphStructureNodeType
+    public abstract class SceneGraphStructureNodeType
     {
     }
 }

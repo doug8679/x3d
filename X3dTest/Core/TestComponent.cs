@@ -13,7 +13,7 @@
         [TestMethod]
         public void Level()
         {
-            var obj = new Component();
+            var obj = new Component(ComponentNames.Core, 1);
 
             obj.Level = 1;
             Assert.AreEqual(obj.Level, 1);

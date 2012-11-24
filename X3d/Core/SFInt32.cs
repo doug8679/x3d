@@ -1,5 +1,6 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Xml.Serialization;
 
     /// <summary>

@@ -13,7 +13,7 @@
             this.Profile = ProfileNames.Core;
         }
 
-        [XmlElement(Order = 0)]
+        [XmlElement(ElementName = "head", Order = 0)]
         public Head Head { get; set; }
 
         [XmlElement(IsNullable = false, Order = 1)]

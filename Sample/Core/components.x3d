@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X3D version="3.2" profile="Core">
+  <head>
+    <component name="CADGeometry" />
+    <component name="Core" />
+    <component name="CubeMapTexturing" />
+    <component name="DIS" />
+    <component name="EnvironmentalEffects" />
+    <component name="EnvironmentalSensor" />
+    <component name="EventUtilities" />
+    <component name="Followers" />
+    <component name="Geometry2D" />
+    <component name="Geometry3D" />
+    <component name="Geospatial" />
+    <component name="Grouping" />
+    <component name="H-Anim" />
+    <component name="Interpolation" />
+    <component name="KeyDeviceSensor" />
+    <component name="Layering" />
+    <component name="Layout" />
+    <component name="Lighting" />
+    <component name="NURBS" />
+    <component name="Navigation" />
+    <component name="Networking" />
+    <component name="ParticleSystems" />
+    <component name="PickingSensor" />
+    <component name="PointingDeviceSensor" />
+    <component name="Rendering" />
+    <component name="RigidBodyPhysics" />
+    <component name="Scripting" />
+    <component name="Shaders" />
+    <component name="Shape" />
+    <component name="Sound" />
+    <component name="Text" />
+    <component name="Texturing" />
+    <component name="Texturing3D" />
+    <component name="Time" />
+  </head>
+  <Scene />
+</X3D>
