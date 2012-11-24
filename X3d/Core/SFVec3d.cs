@@ -1,11 +1,14 @@
 ﻿namespace X3d.Core
 {
+    using System.Xml.Serialization;
+
     /// <summary>
     /// The SFVec3d field or event specifies a three-dimensional (3D) vector.
     /// SFVec3d's are represented as a 3-tuple of double-precision floating
     /// point values. The default value of an uninitialized SFVec3d field
     /// is (0 0 0).
     /// </summary>
+    [XmlType(TypeName = "SFVec3d")]
     public class SFVec3d : X3DVec3Field<SFDouble>
     {
         public SFVec3d()

@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="X3d.Core.Component" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.EXPORT" Collapsed="true">
+    <Position X="4" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAA=</HashCode>
+      <FileName>Core\EXPORT.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.ExternProtoDeclare" Collapsed="true">
+    <Position X="6.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAACAEAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Core\ExternProtoDeclare.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.Field" Collapsed="true">
+    <Position X="11.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAEAQAAAAEAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Core\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.Head" Collapsed="true">
+    <Position X="14.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Head.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.IMPORT" Collapsed="true">
+    <Position X="19.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Core\IMPORT.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.IS" Collapsed="true">
+    <Position X="22.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Core\IS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.Connect" Collapsed="true">
+    <Position X="28" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.Meta" Collapsed="true">
+    <Position X="36.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACgAAAAAAACAAAAUEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Meta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MetadataDouble" Collapsed="true">
+    <Position X="10" Y="16.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\MetadataDouble.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.MetadataFloat" Collapsed="true">
+    <Position X="13" Y="16.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\MetadataFloat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.MetadataInteger" Collapsed="true">
+    <Position X="0.5" Y="16.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\MetadataInteger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.MetadataSet" Collapsed="true">
+    <Position X="3.25" Y="16.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\MetadataSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.MetadataString" Collapsed="true">
+    <Position X="7.25" Y="16.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\MetadataString.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.NameToken" Collapsed="true">
+    <Position X="1.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\NameToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.ProtoBody" Collapsed="true">
+    <Position X="17" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Core\ProtoBody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.ProtoDeclare" Collapsed="true">
+    <Position X="9.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAABBAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ProtoDeclare.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.ProtoInterface" Collapsed="true">
+    <Position X="25.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Core\ProtoInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.ROUTE" Collapsed="true">
+    <Position X="30.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEBAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Core\ROUTE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="X3d.Core.Scene" Collapsed="true">
+    <Position X="39" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Core\Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SceneGraphStructureNodeType" Collapsed="true">
+    <Position X="20" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SceneGraphStructureNodeType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFBool" Collapsed="true">
+    <Position X="13.25" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFBool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFColor" Collapsed="true">
+    <Position X="25.5" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAAQA=</HashCode>
+      <FileName>Core\SFColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFColorRGBA" Collapsed="true">
+    <Position X="32.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAABAAAAAAABAAAQA=</HashCode>
+      <FileName>Core\SFColorRGBA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFDouble" Collapsed="true">
+    <Position X="6" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Core\SFDouble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFFloat" Collapsed="true">
+    <Position X="8.5" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAEAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFFloat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFImage" Collapsed="true">
+    <Position X="15.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEEMABAEAAAAAAABIAAAAAAAABAAA=</HashCode>
+      <FileName>Core\SFImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFInt32" Collapsed="true">
+    <Position X="11" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Core\SFInt32.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFMatrix3d" Collapsed="true">
+    <Position X="35" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\SFMatrix3d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFMatrix3f" Collapsed="true">
+    <Position X="37.5" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\SFMatrix3f.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFMatrix4d" Collapsed="true">
+    <Position X="40" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\SFMatrix4d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFMatrix4f" Collapsed="true">
+    <Position X="42.5" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\SFMatrix4f.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFNode" Collapsed="true">
+    <Position X="3.75" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Core\SFNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFRotation" Collapsed="true">
+    <Position X="27.75" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\SFRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFString" Collapsed="true">
+    <Position X="2.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEgAgAAAAAAAAAAJAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFString.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFTime" Collapsed="true">
+    <Position X="6" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAABQAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Core\SFTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec2d" Collapsed="true">
+    <Position X="18" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec2d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec2f" Collapsed="true">
+    <Position X="20.5" Y="21.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec2f.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec3d" Collapsed="true">
+    <Position X="23" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec3d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec3f" Collapsed="true">
+    <Position X="26.5" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec3f.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec4d" Collapsed="true">
+    <Position X="30" Y="24.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec4d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.SFVec4f" Collapsed="true">
+    <Position X="32.5" Y="24.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SFVec4f.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.WorldInfo" Collapsed="true">
+    <Position X="22.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Core\WorldInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3D" Collapsed="true">
+    <Position X="33.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAIAAgAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Core\X3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DArrayField&lt;SingleField&gt;" Collapsed="true">
+    <Position X="27" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFBool" Collapsed="true">
+    <Position X="44.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFColor" Collapsed="true">
+    <Position X="49.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFColorRGBA" Collapsed="true">
+    <Position X="2" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFDouble" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFFloat" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFImage" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFInt32" Collapsed="true">
+    <Position X="22.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFMatrix3d" Collapsed="true">
+    <Position X="27.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFMatrix3f" Collapsed="true">
+    <Position X="32.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFMatrix4d" Collapsed="true">
+    <Position X="34.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFMatrix4f" Collapsed="true">
+    <Position X="37.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFNode" Collapsed="true">
+    <Position X="39.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFRotation" Collapsed="true">
+    <Position X="42.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFString" Collapsed="true">
+    <Position X="47.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFTime" Collapsed="true">
+    <Position X="52.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec2d" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec2f" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec3d" Collapsed="true">
+    <Position X="14.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec3f" Collapsed="true">
+    <Position X="19.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec4d" Collapsed="true">
+    <Position X="24.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.MFVec4f" Collapsed="true">
+    <Position X="29.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DArrayField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DBindableNode" Collapsed="true">
+    <Position X="20.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAKAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DBindableNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DChildNode" Collapsed="true">
+    <Position X="20.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DChildNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DField" Collapsed="true">
+    <Position X="22" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DInfoNode" Collapsed="true">
+    <Position X="22.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DInfoNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DMatrixField&lt;TPrimitive&gt;" Collapsed="true">
+    <Position X="38.5" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAQAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DMatrixField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DMetadataObject&lt;MetadataType&gt;" Collapsed="true">
+    <Position X="6.5" Y="15.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Core\X3DMetadataObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DNode" Collapsed="true">
+    <Position X="11.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAEAEQ=</HashCode>
+      <FileName>Core\X3DNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DPrimitiveField" Collapsed="true">
+    <Position X="9.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DPrimitiveField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DPrimitiveField&lt;TPrimitive&gt;" Collapsed="true">
+    <Position X="9.25" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAIAAAAA=</HashCode>
+      <FileName>Core\X3DPrimitiveField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DPrototype" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DPrototype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DPrototypeInstance" Collapsed="true">
+    <Position X="15.75" Y="13.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DPrototypeInstance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DSensorNode" Collapsed="true">
+    <Position X="18.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DSensorNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DVec2Field&lt;TPrimitive&gt;" Collapsed="true">
+    <Position X="25" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAEgAAQAAAAAAAAAIAAAAAAAAAAYAA=</HashCode>
+      <FileName>Core\X3DVectorField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DVec3Field&lt;TPrimitive&gt;" Collapsed="true">
+    <Position X="27.5" Y="21.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>Core\X3DVectorField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DVec4Field&lt;TPrimitive&gt;" Collapsed="true">
+    <Position X="31" Y="22.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAABAAAAAA=</HashCode>
+      <FileName>Core\X3DVectorField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="X3d.Core.X3DMetadataObject" Collapsed="true">
+    <Position X="7" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DMetadataObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="X3d.Core.SceneChildContentModel" Collapsed="true">
+    <Position X="4.25" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.AppearanceChildContentModel" Collapsed="true">
+    <Position X="16.5" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.AppearanceChildContentModelNoProtoInstance" Collapsed="true">
+    <Position X="55" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModel" Collapsed="true">
+    <Position X="20" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelCore" Collapsed="true">
+    <Position X="18" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelInterchange" Collapsed="true">
+    <Position X="31" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelInteractive" Collapsed="true">
+    <Position X="34.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelImmersive" Collapsed="true">
+    <Position X="37.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelFull" Collapsed="true">
+    <Position X="7.75" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelDIS" Collapsed="true">
+    <Position X="10.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelGeoSpatial" Collapsed="true">
+    <Position X="13.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelHumanoidAnimation" Collapsed="true">
+    <Position X="21.25" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelNurbs" Collapsed="true">
+    <Position X="25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelProtoInstance" Collapsed="true">
+    <Position X="27.75" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ChildContentModelSceneGraphStructure" Collapsed="true">
+    <Position X="23.75" Y="8.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ColorCoordinateContentModel" Collapsed="true">
+    <Position X="56.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ColorNormalTexCoordContentModel" Collapsed="true">
+    <Position X="60.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ComposedGeometryContentModel" Collapsed="true">
+    <Position X="62" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ColorCoordinateNormalTexCoordContentModel" Collapsed="true">
+    <Position X="58.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModel" Collapsed="true">
+    <Position X="50.25" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelInterchange" Collapsed="true">
+    <Position X="56.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelInteractive" Collapsed="true">
+    <Position X="55" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelImmersive" Collapsed="true">
+    <Position X="62" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModel2D" Collapsed="true">
+    <Position X="55" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelCAD" Collapsed="true">
+    <Position X="58.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModel2DImmersive" Collapsed="true">
+    <Position X="56.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelGeoSpatial" Collapsed="true">
+    <Position X="60.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GeometryContentModelNurbs" Collapsed="true">
+    <Position X="58.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.GroupingNodeChildContentModel" Collapsed="true">
+    <Position X="22" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.LoadSensorChildContentModel" Collapsed="true">
+    <Position X="62" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.SceneGraphFragmentContentModel" Collapsed="true">
+    <Position X="17.75" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.SceneGraphFragmentWithPrototypeDeclarationsContentModel" Collapsed="true">
+    <Position X="60.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.ShapeChildContentModel" Collapsed="true">
+    <Position X="62" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.SoundChildContentModel" Collapsed="true">
+    <Position X="55" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.TextChildContentModel" Collapsed="true">
+    <Position X="56.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.TextureBackgroundChildContentModel" Collapsed="true">
+    <Position X="58.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.LayoutGroupContentModel" Collapsed="true">
+    <Position X="60.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.RigidJointNodeContentModel" Collapsed="true">
+    <Position X="58.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.RigidBodyContentModel" Collapsed="true">
+    <Position X="56.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="X3d.Core.RigidBodyCollectionContentModel" Collapsed="true">
+    <Position X="55" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GroupDefinitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="X3d.Core.AccessTypeNames" Collapsed="true">
+    <Position X="55" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAAAEACA=</HashCode>
+      <FileName>Core\AccessTypeNames.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="X3d.Core.ComponentNames" Collapsed="true">
+    <Position X="56.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAEAgAAAAACIgAgAASiAAJAQG4EAQAKBAACDAAAQQA=</HashCode>
+      <FileName>Core\ComponentNames.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="X3d.Core.MetaDirectionValues" Collapsed="true">
+    <Position X="58.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Core\MetaDirectionValues.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="X3d.Core.ProfileNames" Collapsed="true">
+    <Position X="60.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAIAAAAAgABAAAAAAAAIAAgAAABAAAAA=</HashCode>
+      <FileName>Core\ProfileName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="X3d.Core.SFImageComponentSize" Collapsed="true">
+    <Position X="62" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAABA=</HashCode>
+      <FileName>Core\SFImage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="X3d.Core.X3DVersion" Collapsed="true">
+    <Position X="55" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\X3DVersion.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

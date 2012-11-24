@@ -1,5 +1,7 @@
 ﻿namespace X3d.Core
 {
+    using System.Xml.Serialization;
+
     /// <summary>
     /// The SFDouble field specifies one double-precision floating point number.
     /// Implementation of these fields is targeted at the double precision
@@ -9,6 +11,7 @@
     /// range of at least [-12, 12] for both positive and negative numbers.
     /// The default value of an uninitialized SFDouble field is 0.0.
     /// </summary>
+    [XmlType(TypeName = "SFDouble")]
     public class SFDouble : X3DPrimitiveField<double>
     {
         #region Constructors
