@@ -4,6 +4,7 @@
     <Meta name="library" content="X3D.NET" />
     <Meta name="author" content="Alexander Dong Back Kim" />
     <Meta name="name" content="content" dir="rtl" http-equiv="http-equiv" lang="lang" scheme="scheme" />
+    <Meta content="" />
   </head>
   <Scene />
 </X3D>

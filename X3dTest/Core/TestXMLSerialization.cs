@@ -105,6 +105,7 @@
             var meta1 = new Meta();
             var meta2 = new Meta();
             var meta3 = new Meta();
+            var meta4 = new Meta();
 
             meta1.Name = "library";
             meta2.Name = "author";
@@ -122,6 +123,7 @@
             x3d.Head.Meta.Add(meta1);
             x3d.Head.Meta.Add(meta2);
             x3d.Head.Meta.Add(meta3);
+            x3d.Head.Meta.Add(meta4);
 
             Serialize(file, x3d);
         }
