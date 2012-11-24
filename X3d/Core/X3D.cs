@@ -5,7 +5,15 @@
     [XmlRoot(ElementName = "X3D", IsNullable = false)]
     public class X3D : SceneGraphStructureNodeType
     {
-        [XmlElement(IsNullable = true, Order = 0)]
+        public X3D()
+        {
+            this.Head = null;
+            this.Scene = new Scene();
+            this.Version = X3DVersion.X3D_3_2;
+            this.Profile = ProfileNames.Core;
+        }
+
+        [XmlElement(Order = 0)]
         public Head Head { get; set; }
 
         [XmlElement(IsNullable = false, Order = 1)]
