@@ -204,5 +204,21 @@
         }
 
         #endregion String compatibility
+
+        #region Object Equality
+
+        public override bool Equals(object obj)
+        {
+            // TODO: Implement image object equality
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            // TODO: Implement image object equality
+            return base.GetHashCode();
+        }
+
+        #endregion
     }
 }

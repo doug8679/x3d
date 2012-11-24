@@ -39,6 +39,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,6 +54,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\TestComponent.cs" />
+    <Compile Include="Core\TestMetadataObjects.cs" />
     <Compile Include="Core\TestSFBool.cs" />
     <Compile Include="Core\TestSFColor.cs" />
     <Compile Include="Core\TestSFColorRGBA.cs" />
@@ -75,6 +78,8 @@
     <Compile Include="Core\TestSFVec4f.cs" />
     <Compile Include="Core\TestSFNode.cs" />
     <Compile Include="Core\TestX3DArrayField.cs" />
+    <Compile Include="Core\TestX3DBindableNode.cs" />
+    <Compile Include="Core\TestXMLSerialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

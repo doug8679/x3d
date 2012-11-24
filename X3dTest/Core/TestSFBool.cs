@@ -53,8 +53,8 @@
             var a = new SFBool();
             var b = new SFBool(true);
 
-            Assert.AreEqual(a.ToString(), bool.FalseString);
-            Assert.AreEqual(b.ToString(), bool.TrueString);
+            Assert.AreEqual(a.ToString(), SFBool.FalseString);
+            Assert.AreEqual(b.ToString(), SFBool.TrueString);
         }
 
         [TestMethod]

@@ -6,7 +6,7 @@
     [XmlType(TypeName = "Scene")]
     public class Scene : SceneGraphStructureNodeType
     {
-        [XmlElement(IsNullable = true)]
+        [XmlIgnore]
         public List<SceneChildContentModel> ChildNodes { get; set; }
     }
 }
