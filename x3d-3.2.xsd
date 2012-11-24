@@ -9,6 +9,69 @@
   <!-- COVERED BY THE IMPLEMENTATION                                        -->
   <!--======================================================================-->
 
+  <!-- X3D Structure Node Types -->
+  
+  <xs:element name="X3D">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SceneGraphStructureNodeType">
+          <xs:sequence>
+            <xs:element ref="head" minOccurs="0" />
+            <xs:element ref="Scene" />
+          </xs:sequence>
+          <xs:attribute name="version" type="x3dVersion" use="required" />
+          <xs:attribute name="profile" type="profileNames" use="required" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="head">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SceneGraphStructureNodeType">
+          <xs:sequence>
+            <xs:element ref="component" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="meta" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="component">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SceneGraphStructureNodeType">
+          <xs:attribute name="name" type="componentNames" use="required" />
+          <xs:attribute name="level" use="required">
+            <xs:simpleType>
+              <xs:restriction base="SFInt32">
+                <xs:minInclusive value="1" />
+                <xs:maxInclusive value="5" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="meta">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SceneGraphStructureNodeType">
+          <xs:attribute name="name" type="SFString" />
+          <xs:attribute name="content" type="SFString" use="required" />
+          <xs:attribute name="dir" type="metaDirectionValues" />
+          <xs:attribute name="http-equiv" type="SFString" />
+          <xs:attribute name="lang" type="SFString" />
+          <xs:attribute name="scheme" type="SFString" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  
   <!-- X3D Enumerations -->
     
   <xs:simpleType name="profileNames">
@@ -6136,26 +6199,7 @@
   <!--======================================================================-->
   <!--Scene graph structural nodes now available as elements and via SAI: X3D, header, component, meta, Scene, ROUTE, USE, field, fieldValue, ProtoDeclare, ExternProtoDeclare, ProtoInstance-->
   <!--======================================================================-->
-  <xs:element name="component">
-    <xs:annotation>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#Components" />
-    </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="SceneGraphStructureNodeType">
-          <xs:attribute name="name" type="componentNames" use="required" />
-          <xs:attribute name="level" use="required">
-            <xs:simpleType>
-              <xs:restriction base="SFInt32">
-                <xs:minInclusive value="1" />
-                <xs:maxInclusive value="5" />
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  
   <xs:element name="EXPORT">
     <xs:annotation>
       <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/concepts.html#EXPORTSemantics" />
@@ -6244,35 +6288,7 @@
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="head">
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="SceneGraphStructureNodeType">
-          <xs:sequence>
-            <xs:element ref="component" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element ref="meta" minOccurs="0" maxOccurs="unbounded" />
-          </xs:sequence>
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="meta">
-    <xs:annotation>
-      <xs:documentation source="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
-    </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="SceneGraphStructureNodeType">
-          <xs:attribute name="name" type="SFString" />
-          <xs:attribute name="content" type="SFString" use="required" />
-          <xs:attribute name="dir" type="metaDirectionValues" />
-          <xs:attribute name="http-equiv" type="SFString" />
-          <xs:attribute name="lang" type="SFString" />
-          <xs:attribute name="scheme" type="SFString" />
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  
   <xs:element name="ExternProtoDeclare">
     <xs:complexType>
       <xs:complexContent>
@@ -6374,23 +6390,7 @@
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="X3D">
-    <xs:annotation>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19776-1/v3.2/Part01/concepts.html#Header" />
-    </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="SceneGraphStructureNodeType">
-          <xs:sequence>
-            <xs:element ref="head" minOccurs="0" />
-            <xs:element ref="Scene" />
-          </xs:sequence>
-          <xs:attribute name="version" type="x3dVersion" use="required" />
-          <xs:attribute name="profile" type="profileNames" use="required" />
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  
   <!--======================================================================-->
   <!--Node sets for the DIS, GeoSpatial, HumanoidAnimation and Nurbs components are included in the X3D schema so that the Full Profile which combines them is complete in a single file. -->
   <!--======================================================================-->

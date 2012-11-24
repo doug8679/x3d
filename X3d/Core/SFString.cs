@@ -65,12 +65,26 @@
 
         public static implicit operator SFString(string obj)
         {
-            return new SFString(obj);
+            if (obj == null)
+            {
+                return null;
+            }
+            else
+            {
+                return new SFString(obj);    
+            }
         }
 
         public static implicit operator string(SFString obj)
         {
-            return obj.Data;
+            if (obj == null)
+            {
+                return null;
+            }
+            else
+            {
+                return obj.Data;    
+            }
         }
 
         #endregion String Compatibility

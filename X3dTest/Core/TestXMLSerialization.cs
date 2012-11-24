@@ -91,5 +91,39 @@
 
             Serialize(file, x3d);
         }
+
+        [TestMethod]
+        public void Serialization_Meta()
+        {
+            const string file = @"..\..\..\Sample\Core\meta.x3d";
+
+            var x3d = new X3D();
+            var head = new Head();
+
+            x3d.Head = head;
+
+            var meta1 = new Meta();
+            var meta2 = new Meta();
+            var meta3 = new Meta();
+
+            meta1.Name = "library";
+            meta2.Name = "author";
+            meta3.Name = "name";
+
+            meta1.Content = "X3D.NET";
+            meta2.Content = "Alexander Dong Back Kim";
+            meta3.Content = "content";
+
+            meta3.Direction = MetaDirectionValues.RightToLeft;
+            meta3.HttpEquivalant = "http-equiv";
+            meta3.Language = "lang";
+            meta3.Scheme = "scheme";
+
+            x3d.Head.Meta.Add(meta1);
+            x3d.Head.Meta.Add(meta2);
+            x3d.Head.Meta.Add(meta3);
+
+            Serialize(file, x3d);
+        }
     }
 }

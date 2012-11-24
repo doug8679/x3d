@@ -9,7 +9,7 @@
         public Component()
         {
             this.Name = ComponentNames.Core;
-            this.Level = 1;
+            this.Level = null;
         }
 
         public Component(ComponentNames name, SFInt32 level)
@@ -53,7 +53,7 @@
 
             set
             {
-                
+                this.level.FromString(value);
             }
         }
     }
