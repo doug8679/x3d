@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <X3D version="3.2" profile="Core">
   <head>
-    <component name="CADGeometry" />
-    <component name="Core" />
-    <component name="CubeMapTexturing" />
-    <component name="DIS" />
-    <component name="EnvironmentalEffects" />
-    <component name="EnvironmentalSensor" />
-    <component name="EventUtilities" />
-    <component name="Followers" />
-    <component name="Geometry2D" />
-    <component name="Geometry3D" />
-    <component name="Geospatial" />
-    <component name="Grouping" />
-    <component name="H-Anim" />
-    <component name="Interpolation" />
-    <component name="KeyDeviceSensor" />
-    <component name="Layering" />
-    <component name="Layout" />
-    <component name="Lighting" />
-    <component name="NURBS" />
-    <component name="Navigation" />
-    <component name="Networking" />
-    <component name="ParticleSystems" />
-    <component name="PickingSensor" />
-    <component name="PointingDeviceSensor" />
-    <component name="Rendering" />
-    <component name="RigidBodyPhysics" />
-    <component name="Scripting" />
-    <component name="Shaders" />
-    <component name="Shape" />
-    <component name="Sound" />
-    <component name="Text" />
-    <component name="Texturing" />
-    <component name="Texturing3D" />
-    <component name="Time" />
+    <component name="CADGeometry" level="1" />
+    <component name="Core" level="1" />
+    <component name="CubeMapTexturing" level="1" />
+    <component name="DIS" level="1" />
+    <component name="EnvironmentalEffects" level="1" />
+    <component name="EnvironmentalSensor" level="1" />
+    <component name="EventUtilities" level="1" />
+    <component name="Followers" level="1" />
+    <component name="Geometry2D" level="1" />
+    <component name="Geometry3D" level="1" />
+    <component name="Geospatial" level="1" />
+    <component name="Grouping" level="1" />
+    <component name="H-Anim" level="1" />
+    <component name="Interpolation" level="1" />
+    <component name="KeyDeviceSensor" level="1" />
+    <component name="Layering" level="1" />
+    <component name="Layout" level="1" />
+    <component name="Lighting" level="1" />
+    <component name="NURBS" level="1" />
+    <component name="Navigation" level="1" />
+    <component name="Networking" level="1" />
+    <component name="ParticleSystems" level="1" />
+    <component name="PickingSensor" level="1" />
+    <component name="PointingDeviceSensor" level="1" />
+    <component name="Rendering" level="1" />
+    <component name="RigidBodyPhysics" level="1" />
+    <component name="Scripting" level="1" />
+    <component name="Shaders" level="1" />
+    <component name="Shape" level="1" />
+    <component name="Sound" level="1" />
+    <component name="Text" level="1" />
+    <component name="Texturing" level="1" />
+    <component name="Texturing3D" level="1" />
+    <component name="Time" level="1" />
   </head>
   <Scene />
 </X3D>
