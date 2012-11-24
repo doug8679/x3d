@@ -138,10 +138,26 @@
 
             var meta1 = new MetadataDouble();
             var meta2 = new MetadataFloat();
+            var meta3 = new MetadataInteger();
+            var meta4 = new MetadataSet();
+            var meta5 = new MetadataString();
 
             scene.ChildNodes.Add(meta1);
             scene.ChildNodes.Add(meta2);
+            scene.ChildNodes.Add(meta3);
+            scene.ChildNodes.Add(meta4);
+            scene.ChildNodes.Add(meta5);
 
+            var submeta1 = new MetadataDouble();
+            var submeta2 = new MetadataFloat();
+            var submeta3 = new MetadataInteger();
+            var submeta4 = new MetadataString();
+
+            meta4.Value.Add(submeta1);
+            meta4.Value.Add(submeta2);
+            meta4.Value.Add(submeta3);
+            meta4.Value.Add(submeta4);
+            
             Serialize(file, x3d);
         }
     }

@@ -43,6 +43,7 @@
     <Compile Include="Core\AccessTypeNames.cs" />
     <Compile Include="Core\Component.cs" />
     <Compile Include="Core\ComponentNames.cs" />
+    <Compile Include="Core\Connect.cs" />
     <Compile Include="Core\EXPORT.cs" />
     <Compile Include="Core\ExternProtoDeclare.cs" />
     <Compile Include="Core\Field.cs" />
