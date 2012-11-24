@@ -21,6 +21,22 @@
             return string.Join(", ", this);
         }
 
+        public void FromString(string str)
+        {
+            var delimiter = new char[] { ',' };
+            var tokens = str.Split(delimiter);
+
+            this.Clear();
+
+            foreach (var token in tokens)
+            {
+                var obj = new SingleField();
+                obj.FromString(token);
+
+                this.Add(obj);
+            }
+        }
+
         #endregion
     }
 
