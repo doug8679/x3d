@@ -10,6 +10,10 @@
     [XmlType(TypeName = "SFBool")]
     public class SFBool : X3DPrimitiveField<bool>
     {
+        public static readonly string TrueString = "true";
+
+        public static readonly string FalseString = "false";
+
         #region Constructors
 
         public SFBool()
@@ -47,7 +51,7 @@
 
         public override string ToString()
         {
-            return base.ToString().ToLower();
+            return this.Primitive ? TrueString : FalseString;
         }
 
         #endregion
