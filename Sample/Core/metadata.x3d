@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <X3D version="3.2" profile="Core">
   <Scene>
-    <MetadataDouble containerField="metadata" />
+    <MetadataDouble containerField="metadata" name="double" reference="reference" value="1, 1, 1, 1, 1" />
     <MetadataFloat containerField="metadata" />
     <MetadataInteger containerField="metadata" />
     <MetadataSet containerField="metadata">

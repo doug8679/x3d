@@ -142,6 +142,10 @@
             var meta4 = new MetadataSet();
             var meta5 = new MetadataString();
 
+            meta1.Name = "double";
+            meta1.Value = "1 1 1 1 1";
+            meta1.Reference = "reference";
+            
             scene.ChildNodes.Add(meta1);
             scene.ChildNodes.Add(meta2);
             scene.ChildNodes.Add(meta3);
