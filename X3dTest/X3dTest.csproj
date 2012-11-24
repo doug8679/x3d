@@ -75,6 +75,7 @@
     <Compile Include="Core\TestSFVec4f.cs" />
     <Compile Include="Core\TestSFNode.cs" />
     <Compile Include="Core\TestX3DArrayField.cs" />
+    <Compile Include="Core\TestXMLSerialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
