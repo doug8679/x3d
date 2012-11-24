@@ -42,5 +42,14 @@
         }
 
         #endregion Integer Compatibility
+
+        #region
+
+        public override void FromString(string str)
+        {
+            this.Primitive = int.Parse(str);
+        }
+
+        #endregion
     }
 }

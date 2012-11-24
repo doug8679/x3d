@@ -89,6 +89,15 @@
             return string.Format("{0} {1}", this.X, this.Y);
         }
 
+        public override void FromString(string str)
+        {
+            var delimiter = new char[] { ' ' };
+            var tokens = str.Split(delimiter);
+
+            this.X.FromString(tokens[0]);
+            this.Y.FromString(tokens[1]);
+        }
+
         #endregion String Compatibility
     }
 
@@ -159,6 +168,16 @@
         public override string ToString()
         {
             return string.Format("{0} {1} {2}", this.X, this.Y, this.Z);
+        }
+
+        public override void FromString(string str)
+        {
+            var delimiter = new char[] { ' ' };
+            var tokens = str.Split(delimiter);
+
+            this.X.FromString(tokens[0]);
+            this.Y.FromString(tokens[1]);
+            this.Y.FromString(tokens[2]);
         }
 
         #endregion String Compatibility
@@ -233,6 +252,17 @@
         public override string ToString()
         {
             return string.Format("{0} {1} {2} {3}", this.X, this.Y, this.Z, this.Homegeneous);
+        }
+
+        public override void FromString(string str)
+        {
+            var delimiter = new char[] { ' ' };
+            var tokens = str.Split(delimiter);
+
+            this.X.FromString(tokens[0]);
+            this.Y.FromString(tokens[1]);
+            this.Y.FromString(tokens[2]);
+            this.Y.FromString(tokens[3]);
         }
 
         #endregion String Compatibility

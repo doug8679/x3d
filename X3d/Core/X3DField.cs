@@ -10,5 +10,10 @@
     /// </summary>
     public abstract class X3DField
     {
+        #region String Compatibility
+
+        public abstract void FromString(string str);
+
+        #endregion String Compatibility
     }
 }

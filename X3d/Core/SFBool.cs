@@ -1,5 +1,6 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -52,6 +53,22 @@
         public override string ToString()
         {
             return this.Primitive ? TrueString : FalseString;
+        }
+
+        public override void FromString(string str)
+        {
+            if (str.Equals(TrueString))
+            {
+                this.Primitive = true;
+            }
+            else if (str.Equals(FalseString))
+            {
+                this.Primitive = false;
+            }
+            else
+            {
+                throw new FormatException(string.Format("Invalid Boolean string [{0}]", str));
+            }
         }
 
         #endregion

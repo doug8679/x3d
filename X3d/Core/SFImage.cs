@@ -203,22 +203,85 @@
             }
         }
 
+        public override void FromString(string str)
+        {
+            var delimiter = new char[] { ' ' };
+            var tokens = str.Split(delimiter);
+
+            this.ComponentSize = (SFImageComponentSize)int.Parse(tokens[0]);
+            this.Width = int.Parse(tokens[1]);
+            this.Height = int.Parse(tokens[2]);
+
+            switch (ComponentSize)
+            {
+                case SFImageComponentSize.Unknown:
+                    this.Pixels = null;
+                    break;
+
+                case SFImageComponentSize.Grayscale:
+                    GrayscaleFromString(this, tokens);
+                    break;
+
+                case SFImageComponentSize.GrayscaleAlpha:
+                    GrayscaleAlphaFromString(this, tokens);
+                    break;
+
+                case SFImageComponentSize.RGB:
+                    RGBFromString(this, tokens);
+                    break;
+
+                case SFImageComponentSize.RGBA:
+                    RGBAFromString(this, tokens);
+                    break;
+            }
+        }
+
+        private static void GrayscaleFromString(SFImage obj, string[] tokens)
+        {
+            obj.Pixels = new byte[obj.Width,obj.Height];
+
+            for (var pos = 0; pos < (obj.Width * obj.Height); pos++)
+            {
+                obj.Pixels[0, pos] = Convert.ToByte(tokens[pos + 3].Substring(2, 2), 16);
+            }
+        }
+
+        private static void GrayscaleAlphaFromString(SFImage obj, string[] tokens)
+        {
+            obj.Pixels = new byte[obj.Width, obj.Height];
+
+            for (var pos = 0; pos < (obj.Width * obj.Height); pos++)
+            {
+                obj.Pixels[0, pos] = Convert.ToByte(tokens[pos + 3].Substring(2, 2), 16);
+                obj.Pixels[1, pos] = Convert.ToByte(tokens[pos + 3].Substring(4, 2), 16);
+            }
+        }
+
+        private static void RGBFromString(SFImage obj, string[] tokens)
+        {
+            obj.Pixels = new byte[obj.Width, obj.Height];
+
+            for (var pos = 0; pos < (obj.Width * obj.Height); pos++)
+            {
+                obj.Pixels[0, pos] = Convert.ToByte(tokens[pos + 3].Substring(2, 2), 16);
+                obj.Pixels[1, pos] = Convert.ToByte(tokens[pos + 3].Substring(4, 2), 16);
+                obj.Pixels[2, pos] = Convert.ToByte(tokens[pos + 3].Substring(6, 2), 16);
+            }
+        }
+
+        private static void RGBAFromString(SFImage obj, string[] tokens)
+        {
+            obj.Pixels = new byte[obj.Width, obj.Height];
+
+            for (var pos = 0; pos < (obj.Width * obj.Height); pos++)
+            {
+                obj.Pixels[0, pos] = Convert.ToByte(tokens[pos + 3].Substring(2, 2), 16);
+                obj.Pixels[1, pos] = Convert.ToByte(tokens[pos + 3].Substring(4, 2), 16);
+                obj.Pixels[2, pos] = Convert.ToByte(tokens[pos + 3].Substring(6, 2), 16);
+                obj.Pixels[2, pos] = Convert.ToByte(tokens[pos + 3].Substring(8, 2), 16);
+            }
+        }
+
         #endregion String compatibility
-
-        #region Object Equality
-
-        public override bool Equals(object obj)
-        {
-            // TODO: Implement image object equality
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            // TODO: Implement image object equality
-            return base.GetHashCode();
-        }
-
-        #endregion
     }
 }

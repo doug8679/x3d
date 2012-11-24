@@ -58,6 +58,11 @@
             return this.Data;
         }
 
+        public override void FromString(string str)
+        {
+            this.Data = str;
+        }
+
         public static implicit operator SFString(string obj)
         {
             return new SFString(obj);
