@@ -21,7 +21,14 @@
 
             foreach (var item in ChildNodes)
             {
-                ((X3DNode)item).Write(writer);
+                if ((item as X3DNode) != null)
+                {
+                    ((X3DNode)item).Write(writer);        
+                }
+                else if ((item as X3DPrototype) != null)
+                {
+                    ((X3DPrototype)item).Write(writer);
+                }
             }
 
             writer.WriteEndElement();

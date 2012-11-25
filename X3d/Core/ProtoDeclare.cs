@@ -1,19 +1,34 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
+    using System.Xml;
 
     public class ProtoDeclare : X3DPrototype, ChildContentModelSceneGraphStructure
     {
-        [XmlElement(IsNullable = true, Order = 0)]
+        public const string ElementName = "ProtoDeclare";
+
+        public const string AppInfoAttributeName = "appinfo";
+
+        public const string DocumentationAttributeName = "documentation";
+
+        public ProtoDeclare()
+        {
+            this.Interface = null;
+            this.Body = null;
+            this.AppInfo = null;
+            this.Documentation = null;
+        }
+
         public ProtoInterface Interface { get; set; }
 
-        [XmlElement(Order = 1)]
         public ProtoBody Body { get; set; }
 
-        [XmlAttribute(AttributeName = "appInfo")]
         public SFString AppInfo { get; set; }
 
-        [XmlAttribute(AttributeName = "documentation")]
         public SFString Documentation { get; set; }
+
+        public void Write(XmlWriter writer)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

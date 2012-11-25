@@ -1,14 +1,12 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFBool field specifies a single Boolean value. Each Boolean value
     /// represents either TRUE or FALSE. How these values are represented is
     /// encoding dependent.
     /// </summary>
-    [XmlType(TypeName = "SFBool")]
     public class SFBool : X3DPrimitiveField<bool>
     {
         public static readonly string TrueString = "true";

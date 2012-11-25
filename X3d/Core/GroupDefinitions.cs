@@ -1,6 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
+    using System.Xml;
 
     /* Extra node groups grouping the virtual node groups below */
 
