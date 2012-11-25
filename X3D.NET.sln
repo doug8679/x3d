@@ -7,15 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X3dTest", "X3dTest\X3dTest.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X3D Schema", "X3D Schema", "{0F8F732B-D29D-44C9-98A4-079EC2AC1CE5}"
 	ProjectSection(SolutionItems) = preProject
-		x3d-3.0-Web3dExtensionsPrivate.xsd = x3d-3.0-Web3dExtensionsPrivate.xsd
-		x3d-3.0-Web3dExtensionsPublic.xsd = x3d-3.0-Web3dExtensionsPublic.xsd
-		x3d-3.0.xsd = x3d-3.0.xsd
-		x3d-3.1-Web3dExtensionsPrivate.xsd = x3d-3.1-Web3dExtensionsPrivate.xsd
-		x3d-3.1-Web3dExtensionsPublic.xsd = x3d-3.1-Web3dExtensionsPublic.xsd
-		x3d-3.1.xsd = x3d-3.1.xsd
-		x3d-3.2-Web3dExtensionsPrivate.xsd = x3d-3.2-Web3dExtensionsPrivate.xsd
-		x3d-3.2-Web3dExtensionsPublic.xsd = x3d-3.2-Web3dExtensionsPublic.xsd
-		x3d-3.2.xsd = x3d-3.2.xsd
+		Sample\Schema\x3d-3.0-Web3dExtensionsPrivate.xsd = Sample\Schema\x3d-3.0-Web3dExtensionsPrivate.xsd
+		Sample\Schema\x3d-3.0-Web3dExtensionsPublic.xsd = Sample\Schema\x3d-3.0-Web3dExtensionsPublic.xsd
+		Sample\Schema\x3d-3.0.xsd = Sample\Schema\x3d-3.0.xsd
+		Sample\Schema\x3d-3.1-Web3dExtensionsPrivate.xsd = Sample\Schema\x3d-3.1-Web3dExtensionsPrivate.xsd
+		Sample\Schema\x3d-3.1-Web3dExtensionsPublic.xsd = Sample\Schema\x3d-3.1-Web3dExtensionsPublic.xsd
+		Sample\Schema\x3d-3.1.xsd = Sample\Schema\x3d-3.1.xsd
+		Sample\Schema\x3d-3.2-Web3dExtensionsPrivate.xsd = Sample\Schema\x3d-3.2-Web3dExtensionsPrivate.xsd
+		Sample\Schema\x3d-3.2-Web3dExtensionsPublic.xsd = Sample\Schema\x3d-3.2-Web3dExtensionsPublic.xsd
+		Sample\Schema\x3d-3.2.xsd = Sample\Schema\x3d-3.2.xsd
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X3D.NET Architecture", "X3D.NET Architecture", "{84BEFDFD-4789-48D9-B763-5508F2559691}"
