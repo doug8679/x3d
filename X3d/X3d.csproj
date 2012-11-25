@@ -44,12 +44,13 @@
     <Compile Include="Core\Component.cs" />
     <Compile Include="Core\ComponentNames.cs" />
     <Compile Include="Core\Connect.cs" />
-    <Compile Include="Core\EXPORT.cs" />
+    <Compile Include="Core\Export.cs" />
     <Compile Include="Core\ExternProtoDeclare.cs" />
     <Compile Include="Core\Field.cs" />
+    <Compile Include="Core\FieldTypeName.cs" />
     <Compile Include="Core\GroupDefinitions.cs" />
     <Compile Include="Core\Head.cs" />
-    <Compile Include="Core\IMPORT.cs" />
+    <Compile Include="Core\Import.cs" />
     <Compile Include="Core\IS.cs" />
     <Compile Include="Core\Meta.cs" />
     <Compile Include="Core\MetadataDouble.cs" />
@@ -63,7 +64,7 @@
     <Compile Include="Core\ProtoBody.cs" />
     <Compile Include="Core\ProtoDeclare.cs" />
     <Compile Include="Core\ProtoInterface.cs" />
-    <Compile Include="Core\ROUTE.cs" />
+    <Compile Include="Core\Route.cs" />
     <Compile Include="Core\Scene.cs" />
     <Compile Include="Core\SceneGraphStructureNodeType.cs" />
     <Compile Include="Core\SFColor.cs" />
@@ -143,6 +144,7 @@
     <Folder Include="VolumeRendering\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="X3D.NET Core.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

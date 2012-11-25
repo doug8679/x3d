@@ -3,9 +3,9 @@
     using System;
     using System.Xml;
 
-    public class ROUTE : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    public class Route : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
     {
-        public ROUTE()
+        public Route()
         {
         }
 

@@ -26,9 +26,43 @@
 
         public SFString Documentation { get; set; }
 
-        public void Write(XmlWriter writer)
+        protected override void WriteAttributes(XmlWriter writer)
         {
-            throw new System.NotImplementedException();
+            base.WriteAttributes(writer);
+
+            if (this.AppInfo != null)
+            {
+                writer.WriteAttributeString(AppInfoAttributeName, this.AppInfo.ToString());
+            }
+
+            if (this.Documentation != null)
+            {
+                writer.WriteAttributeString(DocumentationAttributeName, this.Documentation.ToString());
+            }
+        }
+
+        protected override void WriteChildElements(XmlWriter writer)
+        {
+            base.WriteChildElements(writer);
+
+            if (this.Interface != null)
+            {
+                this.Interface.Write(writer);
+            }
+
+            if (this.Body != null)
+            {
+                this.Body.Write(writer);
+            }
+        }
+
+        public override void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);
+
+            base.Write(writer);
+
+            writer.WriteEndElement();
         }
     }
 }

@@ -1823,133 +1823,41 @@
   </xs:complexType>
   <!--======================================================================-->
   <!-- Most child-node content models are provided by these xs:group element definitions.  These are necessary since complexType definitions can't be used to define contained content elements.-->
+  
   <xs:group name="AppearanceChildContentModel">
-    <xs:annotation>
-      <xs:appinfo>Child-node content model corresponding to X3DAppearanceChildNode.  Appearance can contain FillProperties, LineProperties, Material, any Texture node and any TextureTransform node, in any order. No more than one instance of these nodes is allowed.  Appearance may also contain multiple shaders (ComposedShader, PackagedShader, ProgramShader).</xs:appinfo>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/shape.html#Appearancenode" />
-    </xs:annotation>
     <xs:choice>
       <xs:group ref="AppearanceChildContentModelNoProtoInstance" />
       <xs:element ref="ProtoInstance">
-        <xs:annotation>
-          <xs:documentation>Appropriately typed substitute node</xs:documentation>
-        </xs:annotation>
       </xs:element>
     </xs:choice>
   </xs:group>
+  
   <xs:group name="AppearanceChildContentModelNoProtoInstance">
-    <xs:annotation>
-      <xs:appinfo>Child-node content model corresponding to X3DAppearanceChildNode.  Appearance can contain FillProperties, LineProperties, Material, TwoSidedMaterial, any Texture node and any TextureTransform node, in any order. No more than one instance of these nodes is allowed.  Appearance may also contain multiple shaders (ComposedShader, PackagedShader, ProgramShader).</xs:appinfo>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/shape.html#Appearancenode" />
-    </xs:annotation>
     <xs:choice>
-      <xs:element ref="FillProperties">
-        <xs:annotation>
-          <xs:documentation>fillProperties</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="LineProperties">
-        <xs:annotation>
-          <xs:documentation>lineProperties</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="Material">
-        <xs:annotation>
-          <xs:documentation>material</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="TwoSidedMaterial">
-        <xs:annotation>
-          <xs:documentation>material</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ComposedShader">
-        <xs:annotation>
-          <xs:documentation>shaders</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="PackagedShader">
-        <xs:annotation>
-          <xs:documentation>shaders</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ProgramShader">
-        <xs:annotation>
-          <xs:documentation>shaders</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ComposedCubeMapTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ComposedTexture3D">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ImageTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ImageTexture3D">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="MovieTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="MultiTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="PixelTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="PixelTexture3D">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="GeneratedCubeMapTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="ImageCubeMapTexture">
-        <xs:annotation>
-          <xs:documentation>texture</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="MultiTextureTransform">
-        <xs:annotation>
-          <xs:documentation>textureTransform</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="TextureTransform">
-        <xs:annotation>
-          <xs:documentation>textureTransform</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="TextureTransform3D">
-        <xs:annotation>
-          <xs:documentation>textureTransform</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element ref="TextureTransformMatrix3D">
-        <xs:annotation>
-          <xs:documentation>textureTransform</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element ref="FillProperties"/>
+      <xs:element ref="LineProperties"/>
+      <xs:element ref="Material"/>
+      <xs:element ref="TwoSidedMaterial"/>
+      <xs:element ref="ComposedShader"/>
+      <xs:element ref="PackagedShader"/>
+      <xs:element ref="ProgramShader"/>
+      <xs:element ref="ComposedCubeMapTexture"/>
+      <xs:element ref="ComposedTexture3D"/>
+      <xs:element ref="ImageTexture"/>
+      <xs:element ref="ImageTexture3D"/>
+      <xs:element ref="MovieTexture"/>
+      <xs:element ref="MultiTexture"/>
+      <xs:element ref="PixelTexture"/>
+      <xs:element ref="PixelTexture3D"/>
+      <xs:element ref="GeneratedCubeMapTexture"/>
+      <xs:element ref="ImageCubeMapTexture"/>
+      <xs:element ref="MultiTextureTransform"/>
+      <xs:element ref="TextureTransform"/>
+      <xs:element ref="TextureTransform3D"/>
+      <xs:element ref="TextureTransformMatrix3D"/>
     </xs:choice>
   </xs:group>
+  
   <xs:group name="ChildContentModel">
     <xs:choice>
       <!-- ChildContentModelCore omitted here since included in X3DNode type definition -->

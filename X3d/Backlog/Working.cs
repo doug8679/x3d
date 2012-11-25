@@ -220,7 +220,27 @@
     public class NurbsSurfaceInterpolator : ChildContentModelNurbs { }
     public class NurbsSet : ChildContentModelNurbs { }
 
-    public class ProtoInstance : ChildContentModelProtoInstance { }
+    public class ProtoInstance : ChildContentModelProtoInstance, AppearanceChildContentModel { }
 
-
+    public class FillProperties : AppearanceChildContentModelNoProtoInstance {}
+    public class LineProperties : AppearanceChildContentModelNoProtoInstance {}
+    public class Material : AppearanceChildContentModelNoProtoInstance {}
+    public class TwoSidedMaterial : AppearanceChildContentModelNoProtoInstance {}
+    public class ComposedShader : AppearanceChildContentModelNoProtoInstance {}
+    public class PackagedShader : AppearanceChildContentModelNoProtoInstance {}
+    public class ProgramShader : AppearanceChildContentModelNoProtoInstance {}
+    public class ComposedCubeMapTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class ComposedTexture3D : AppearanceChildContentModelNoProtoInstance {}
+    public class ImageTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class ImageTexture3D : AppearanceChildContentModelNoProtoInstance {}
+    public class MovieTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class MultiTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class PixelTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class PixelTexture3D : AppearanceChildContentModelNoProtoInstance {}
+    public class GeneratedCubeMapTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class ImageCubeMapTexture : AppearanceChildContentModelNoProtoInstance {}
+    public class MultiTextureTransform : AppearanceChildContentModelNoProtoInstance {}
+    public class TextureTransform : AppearanceChildContentModelNoProtoInstance {}
+    public class TextureTransform3D : AppearanceChildContentModelNoProtoInstance {}
+    public class TextureTransformMatrix3D : AppearanceChildContentModelNoProtoInstance {}
 }

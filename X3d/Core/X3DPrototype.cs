@@ -6,11 +6,7 @@
     /*
      * <xs:group name="ChildContentModelSceneGraphStructure">
     <xs:choice>
-      <xs:element ref="ROUTE" />
-      <xs:element ref="ExternProtoDeclare" />
       <xs:element ref="ProtoDeclare" />
-      <xs:element ref="IMPORT" />
-      <xs:element ref="EXPORT" />
     </xs:choice>
   </xs:group>
      */

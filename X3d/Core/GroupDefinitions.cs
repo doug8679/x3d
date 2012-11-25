@@ -9,8 +9,8 @@
 
     /* Virtual node groups specified in the X3D specification */
 
-    public interface AppearanceChildContentModel : SceneGraphFragmentContentModel { }
-    public interface AppearanceChildContentModelNoProtoInstance { }
+    public interface AppearanceChildContentModel { }
+    public interface AppearanceChildContentModelNoProtoInstance : AppearanceChildContentModel, SceneGraphFragmentContentModel { }
     public interface ChildContentModel : GroupingNodeChildContentModel, SceneGraphFragmentContentModel { }
     public interface ChildContentModelCore : SceneChildContentModel, SceneGraphFragmentContentModel { }
     public interface ChildContentModelInterchange : ChildContentModel { }
@@ -22,7 +22,7 @@
     public interface ChildContentModelHumanoidAnimation : ChildContentModel { }
     public interface ChildContentModelNurbs : ChildContentModel { }
     public interface ChildContentModelProtoInstance : ChildContentModel { }
-    public interface ChildContentModelSceneGraphStructure : GroupingNodeChildContentModel { }
+    public interface ChildContentModelSceneGraphStructure : GroupingNodeChildContentModel, SceneGraphFragmentWithPrototypeDeclarationsContentModel { }
     public interface ColorCoordinateContentModel { }
     public interface ColorNormalTexCoordContentModel { }
     public interface ComposedGeometryContentModel { }
@@ -38,7 +38,7 @@
     public interface GeometryContentModelNurbs { }
     public interface GroupingNodeChildContentModel : SceneChildContentModel { }
     public interface LoadSensorChildContentModel { }
-    public interface SceneGraphFragmentContentModel { }
+    public interface SceneGraphFragmentContentModel : SceneGraphFragmentWithPrototypeDeclarationsContentModel { }
     public interface SceneGraphFragmentWithPrototypeDeclarationsContentModel { }
     public interface ShapeChildContentModel { }
     public interface SoundChildContentModel { }
