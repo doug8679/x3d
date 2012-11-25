@@ -172,9 +172,26 @@
 
             var x3d = new X3D();
 
-            var worldInfo = new WorldInfo();
+            var wi1 = new WorldInfo();
 
-            x3d.Scene.ChildNodes.Add(worldInfo);
+            var wi2 = new WorldInfo();
+            wi2.Title = "Hello";
+
+            var wi3 = new WorldInfo();
+            wi3.Metadata = new MetadataDouble();
+            wi3.ContainerField = "Test";
+
+            var wi4 = new WorldInfo();
+            wi4.Info = "\"A\" \"B\" \"C\"";
+
+            var wi5 = new WorldInfo();
+            wi5.DEF = "HelloWorld";
+
+            x3d.Scene.ChildNodes.Add(wi1);
+            x3d.Scene.ChildNodes.Add(wi2);
+            x3d.Scene.ChildNodes.Add(wi3);
+            x3d.Scene.ChildNodes.Add(wi4);
+            x3d.Scene.ChildNodes.Add(wi5);
 
             Serialize(file, x3d);
         }

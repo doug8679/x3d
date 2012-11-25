@@ -1,5 +1,6 @@
 ﻿namespace X3d.Core
 {
+    using System.Collections.Generic;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -17,7 +18,7 @@
         {
             this.ContainerField = null;
             this.Info = new MFString();
-            this.Title = string.Empty;
+            this.Title = null;
         }
 
         [XmlIgnore]
@@ -28,7 +29,14 @@
         {
             get
             {
-                return this.Info;
+                if (this.Info.Count > 0)
+                {
+                    return this.Info;
+                }
+                else
+                {
+                    return null;
+                }
             }
 
             set
