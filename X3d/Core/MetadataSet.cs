@@ -12,16 +12,6 @@
     {
         public const string ElementName = "MetadataSet";
 
-        protected override void WriteAttributes(XmlWriter writer)
-        {
-            base.WriteAttributes(writer);
-
-            if (this.Value.Count > 0)
-            {
-                writer.WriteAttributeString(ValueAttributeName, this.Value.ToString());
-            }
-        }
-
         protected override void WriteChildElements(XmlWriter writer)
         {
             base.WriteChildElements(writer);

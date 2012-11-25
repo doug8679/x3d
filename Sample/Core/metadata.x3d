@@ -4,7 +4,7 @@
     <MetadataDouble containerField="metadata" name="double" reference="reference" value="1, 1, 1, 1, 1" />
     <MetadataFloat containerField="metadata" />
     <MetadataInteger containerField="metadata" />
-    <MetadataSet containerField="metadata" value="System.Collections.Generic.List`1[X3d.Core.ChildContentModelCore]">
+    <MetadataSet containerField="metadata">
       <MetadataDouble containerField="metadata" />
       <MetadataFloat containerField="metadata" />
       <MetadataInteger containerField="metadata" />
