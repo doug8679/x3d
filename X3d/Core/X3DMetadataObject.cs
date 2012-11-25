@@ -12,6 +12,7 @@
     /// meaning of the name field is considered implicit to the characters 
     /// in the string.
     /// </summary>
+    [XmlInclude(typeof(MetadataDouble))]
     public abstract class X3DMetadataObject : X3DNode, ChildContentModelCore
     {
         public const string NameAttributeName = "name";
@@ -75,6 +76,7 @@
         }
     }
 
+    
     public abstract class X3DMetadataObject<MetadataType> : X3DMetadataObject
         where MetadataType : new()
     {

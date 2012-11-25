@@ -5,10 +5,16 @@
     [XmlType(TypeName = "connect")]
     public class Connect : SceneGraphStructureNodeType
     {
+        public Connect()
+        {
+            this.NodeField = string.Empty;
+            this.ProtoField = string.Empty;
+        }
+
         [XmlAttribute(AttributeName = "nodeField")]
-        public NameToken NodeField { get; set; }
+        public string NodeField { get; set; }
 
         [XmlAttribute(AttributeName = "protoField")]
-        public NameToken ProtoField { get; set; }
+        public string ProtoField { get; set; }
     }
 }

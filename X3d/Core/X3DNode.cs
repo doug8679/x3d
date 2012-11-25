@@ -27,12 +27,10 @@
             this.ContainerField = null;
         }
 
-        //[XmlElement(ElementName = "IS", Order = 0)]
-        [XmlIgnore]
+        [XmlElement(ElementName = "IS", Order = 0)]
         public IS IS { get; set; }
 
-        //[XmlElement(ElementName = "metadata", Order = 1)]
-        [XmlIgnore]
+        [XmlElement(Order = 1)]
         public X3DMetadataObject Metadata { get; set; }
 
         [XmlIgnore]

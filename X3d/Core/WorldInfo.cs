@@ -1,6 +1,9 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Collections.Generic;
+    using System.Xml;
+    using System.Xml.Schema;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -14,6 +17,10 @@
     /// </summary>
     public class WorldInfo : X3DInfoNode, ChildContentModelInterchange
     {
+        public const string InfoAttributeName = "info";
+
+        public const string TitleAttributeName = "title";
+
         public WorldInfo()
         {
             this.ContainerField = null;
@@ -24,7 +31,7 @@
         [XmlIgnore]
         public MFString Info { get; set; }
 
-        [XmlAttribute(AttributeName = "info")]
+        [XmlAttribute(AttributeName = InfoAttributeName)]
         public string InfoString
         {
             get
@@ -48,7 +55,7 @@
         [XmlIgnore]
         public SFString Title { get; set; }
 
-        [XmlAttribute(AttributeName = "title")]
+        [XmlAttribute(AttributeName = TitleAttributeName)]
         public string TitleString
         {
             get
@@ -60,6 +67,11 @@
             {
                 this.Title = value;
             }
+        }
+
+        public XmlSchema GetSchema()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

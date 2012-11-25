@@ -193,6 +193,20 @@
             x3d.Scene.ChildNodes.Add(wi4);
             x3d.Scene.ChildNodes.Add(wi5);
 
+            var wi6 = new WorldInfo();
+
+            wi6.IS = new IS();
+            wi6.IS.Connections.Add(new Connect());
+            wi6.IS.Connections.Add(new Connect());
+
+            wi6.IS.Connections[0].NodeField = "a";
+            wi6.IS.Connections[0].ProtoField = "b";
+
+            wi6.IS.Connections[1].NodeField = "c";
+            wi6.IS.Connections[1].ProtoField = "d";
+
+            x3d.Scene.ChildNodes.Add(wi6);
+
             Serialize(file, x3d);
         }
     }
