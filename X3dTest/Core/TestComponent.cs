@@ -35,7 +35,7 @@
                 obj.Level = 0;
                 Assert.Fail();
             }
-            catch (ArgumentException)
+            catch (FormatException)
             {
             }
 
@@ -44,7 +44,7 @@
                 obj.Level = 6;
                 Assert.Fail();
             }
-            catch (ArgumentException)
+            catch (FormatException)
             {
             }
         }
