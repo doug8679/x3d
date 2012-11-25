@@ -1951,10 +1951,6 @@
     </xs:choice>
   </xs:group>
   <xs:group name="ChildContentModel">
-    <xs:annotation>
-      <xs:appinfo>ChildContentModel is the child-node content model corresponding to X3DChildNode, combining all profiles.  ChildContentModel can contain most nodes, other Grouping nodes, Prototype declarations and ProtoInstances in any order and any combination. When the assigned profile is less than Full, the precise palette of legal nodes that are available depends on assigned profile and components.</xs:appinfo>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/group.html#GroupingAndChildrenNodes">children</xs:documentation>
-    </xs:annotation>
     <xs:choice>
       <!-- ChildContentModelCore omitted here since included in X3DNode type definition -->
       <xs:group ref="ChildContentModelInterchange" />
@@ -1983,10 +1979,6 @@
     </xs:choice>
   </xs:group>
   <xs:group name="ChildContentModelInterchange">
-    <xs:annotation>
-      <xs:appinfo>Child-node content model corresponding to X3DChildNode for Interchange profile.</xs:appinfo>
-      <xs:documentation source="http://www.web3d.org/files/specifications/19775-1/V3.3/Part01/interchange.html" />
-    </xs:annotation>
     <xs:choice>
       <xs:element ref="Background" />
       <xs:element ref="ColorInterpolator" />

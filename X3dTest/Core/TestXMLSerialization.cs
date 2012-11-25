@@ -164,5 +164,19 @@
             
             Serialize(file, x3d);
         }
+
+        [TestMethod]
+        public void Serialization_WorldInfo()
+        {
+            const string file = @"..\..\..\Sample\Core\WorldInfo.x3d";
+
+            var x3d = new X3D();
+
+            var worldInfo = new WorldInfo();
+
+            x3d.Scene.ChildNodes.Add(worldInfo);
+
+            Serialize(file, x3d);
+        }
     }
 }
