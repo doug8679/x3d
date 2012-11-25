@@ -1,9 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Xml.Serialization;
 
-    [XmlType(TypeName = "component")]
     public class Component : SceneGraphStructureNodeType
     {
         public Component()
@@ -18,13 +16,10 @@
             this.Level = level;
         }
 
-        [XmlAttribute(AttributeName = "name")]
         public ComponentNames Name { get; set; }
 
-        [XmlIgnore]
         private SFInt32 level;
 
-        [XmlIgnore]
         public SFInt32 Level
         {
             get
@@ -40,20 +35,6 @@
                 }
 
                 this.level = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "level")]
-        public string LevelString
-        {
-            get
-            {
-                return this.level.ToString();
-            }
-
-            set
-            {
-                this.level.FromString(value);
             }
         }
     }

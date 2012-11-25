@@ -1,25 +1,26 @@
 ﻿namespace X3dTest.Core
 {
-    using System.IO;
-    using System.Xml.Serialization;
+    using System.Xml;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using X3d.Core;
 
     [TestClass]
-    public class TestXMLSerialization
+    public class TestXMLWriter
     {
-        private static void Serialize(string file, X3D x3d)
+        private static void Write(string file, X3D x3d)
         {
-            var serializer = new XmlSerializer(x3d.GetType());
-            var ns = new XmlSerializerNamespaces();
+            var settings = new XmlWriterSettings();
+            settings.Indent = true;
 
-            ns.Add(string.Empty, string.Empty);
-
-            using (TextWriter textWriter = new StreamWriter(file))
+            using (var writer = XmlWriter.Create(file, settings))
             {
-                serializer.Serialize(textWriter, x3d, ns);
+                writer.WriteStartDocument();
+
+                x3d.Write(writer);
+
+                writer.WriteEndDocument();
             }
         }
 
@@ -30,7 +31,7 @@
             
             var x3d = new X3D();
         
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
 
         [TestMethod]
@@ -41,7 +42,7 @@
             var x3d = new X3D();
             x3d.Head = new Head();
 
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
 
         [TestMethod]
@@ -89,7 +90,7 @@
             head.Components.Add(new Component(ComponentNames.Texturing3D, 1));
             head.Components.Add(new Component(ComponentNames.Time, 1));
 
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
 
         [TestMethod]
@@ -125,7 +126,7 @@
             x3d.Head.Meta.Add(meta3);
             x3d.Head.Meta.Add(meta4);
 
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
 
         [TestMethod]
@@ -162,7 +163,7 @@
             meta4.Value.Add(submeta3);
             meta4.Value.Add(submeta4);
             
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
 
         [TestMethod]
@@ -178,7 +179,7 @@
             wi2.Title = "Hello";
 
             var wi3 = new WorldInfo();
-            wi3.Metadata = new MetadataDouble();
+            //wi3.Metadata = new MetadataDouble();
             wi3.ContainerField = "Test";
 
             var wi4 = new WorldInfo();
@@ -207,7 +208,7 @@
 
             x3d.Scene.ChildNodes.Add(wi6);
 
-            Serialize(file, x3d);
+            Write(file, x3d);
         }
     }
 }
