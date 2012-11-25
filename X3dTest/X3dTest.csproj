@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Core\TestComponent.cs" />
     <Compile Include="Core\TestMetadataObjects.cs" />
+    <Compile Include="Core\TestMFString.cs" />
     <Compile Include="Core\TestSFBool.cs" />
     <Compile Include="Core\TestSFColor.cs" />
     <Compile Include="Core\TestSFColorRGBA.cs" />

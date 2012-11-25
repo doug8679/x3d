@@ -1,6 +1,8 @@
 ﻿namespace X3d.Core
 {
     using System.Collections.Generic;
+    using System.Text;
+    using System.Text.RegularExpressions;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -365,6 +367,31 @@
     public class MFString : X3DArrayField<SFString>
     {
         #region String Compatibility
+
+        public override void FromString(string str)
+        {
+            var strNewSplit = new List<string>();
+            var csvSplit = new Regex("(\"(?:[^\"]*)\")", RegexOptions.Compiled);
+
+            foreach (Match match in csvSplit.Matches(str))
+            {
+                strNewSplit.Add(match.Value.TrimStart(',').TrimStart('\"').TrimEnd('\"'));
+            }
+
+            this.FromString(strNewSplit.ToArray());
+        }
+
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
+            
+            foreach (var item in this)
+            {
+                builder.AppendFormat("\"{0}\" ", item);
+            }
+
+            return builder.ToString().TrimEnd(' ');
+        }
 
         public static implicit operator MFString(string str)
         {

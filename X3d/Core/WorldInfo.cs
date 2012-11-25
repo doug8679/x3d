@@ -15,7 +15,7 @@
     {
         public WorldInfo()
         {
-            this.ContainerField = "children";
+            this.ContainerField = null;
             this.Info = new MFString();
             this.Title = string.Empty;
         }
