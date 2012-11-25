@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<X3D version="3.2" profile="Core">
+  <head>
+    <meta name="library" content="X3D.NET" />
+    <meta name="author" content="Alexander Dong Back Kim" />
+    <meta name="name" content="content" dir="rtl" http-equiv="http-equiv" lang="lang" scheme="scheme" />
+    <meta content="" />
+  </head>
+  <Scene />
+</X3D>

@@ -1,26 +1,113 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Collections.Generic;
-    using System.Xml.Serialization;
+    using System.Xml;
 
     public class Field : SceneGraphStructureNodeType
     {
-        [XmlElement(IsNullable = true)]
-        public List<SceneGraphFragmentContentModel> ChildInstance { get; set; }
+        public const string ElementName = "field";
 
-        [XmlAttribute(AttributeName = "name")]
-        public NameToken Name { get; set; }
+        public const string NameAttributeName = "name";
 
-        [XmlAttribute(AttributeName = "type")]
-        public AccessTypeNames Type { get; set; }
+        public const string AccessTypeAttributeName = "accessType";
 
-        [XmlAttribute(AttributeName = "value")]
+        public const string TypeAttributeName = "type";
+
+        public const string ValueAttributeName = "value";
+
+        public const string AppInfoAttributeName = "appinfo";
+
+        public const string DocumentationAttributeName = "documentation";
+
+        public Field()
+        {
+            this.ChildNodes = new List<SceneGraphFragmentContentModel>();
+            this.Name = string.Empty;
+            this.AccessType = AccessTypeNames.InputOutput;
+            this.Type = FieldTypeName.SFBool;
+            this.Value = null;
+            this.AppInfo = null;
+            this.Documentation = null;
+        }
+
+        private List<SceneGraphFragmentContentModel> childNodes;
+        public List<SceneGraphFragmentContentModel> ChildNodes
+        {
+            get
+            {
+                return childNodes;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    throw new FormatException();
+                }
+
+                this.childNodes = value;
+            }
+        }
+
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    throw new FormatException();
+                }
+
+                this.name = value;
+            }
+        }
+
+        public AccessTypeNames AccessType { get; set; }
+
+        public FieldTypeName Type { get; set; }
+
         public SFString Value { get; set; }
 
-        [XmlAttribute(AttributeName = "appInfo")]
         public SFString AppInfo { get; set; }
 
-        [XmlAttribute(AttributeName = "documentation")]
         public SFString Documentation { get; set; }
+
+        public void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);
+
+            writer.WriteAttributeString(NameAttributeName, this.Name);
+            writer.WriteAttributeString(AccessTypeAttributeName, AccessTypeNamesConverter.ToString(this.AccessType));
+            writer.WriteAttributeString(TypeAttributeName, FieldTypeNameConverter.ToString(this.Type));
+
+            if (this.Value != null)
+            {
+                writer.WriteAttributeString(ValueAttributeName, this.Value.ToString());
+            }
+
+            if (this.AppInfo != null)
+            {
+                writer.WriteAttributeString(AppInfoAttributeName, this.AppInfo.ToString());
+            }
+
+            if (this.Documentation != null)
+            {
+                writer.WriteAttributeString(DocumentationAttributeName, this.Documentation.ToString());
+            }
+
+            foreach (var item in this.ChildNodes)
+            {
+                ((X3DNode)item).Write(writer);
+            }
+
+            writer.WriteEndElement();
+        }
     }
 }

@@ -16,7 +16,7 @@
 
             var str = a.ToString();
 
-            Assert.AreEqual(str, "False, True");
+            Assert.AreEqual(str, "false, true");
         }
     }
 }

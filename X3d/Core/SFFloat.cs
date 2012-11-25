@@ -54,6 +54,11 @@
             return Primitive.ToString("0.000000").TrimEnd('0').TrimEnd('.');
         }
 
+        public override void FromString(string str)
+        {
+            this.Primitive = float.Parse(str);
+        }
+
         #endregion String Compatibility
     }
 }
