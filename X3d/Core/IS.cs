@@ -1,21 +1,29 @@
 ﻿namespace X3d.Core
 {
     using System.Collections.Generic;
-    using System.Xml.Serialization;
+    using System.Xml;
 
-    [XmlType(TypeName = "IS")]
     public class IS : SceneGraphStructureNodeType
     {
+        public const string ElementName = "IS";
+
+        public IS()
+        {
+            this.Connections = new List<Connect>();    
+        }
+
         public List<Connect> Connections { get; set; }
-    }
 
-    [XmlType(TypeName = "connect")]
-    public class Connect : SceneGraphStructureNodeType
-    {
-        [XmlAttribute(AttributeName = "nodeField")]
-        public NameToken NodeField { get; set; }
+        public void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);    
 
-        [XmlAttribute(AttributeName = "protoField")]
-        public NameToken ProtoField { get; set; }
+            foreach (var item in this.Connections)
+            {
+                item.Write(writer);
+            }
+
+            writer.WriteEndElement();
+        }
     }
 }

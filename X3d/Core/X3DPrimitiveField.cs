@@ -1,5 +1,7 @@
 ﻿namespace X3d.Core
 {
+    using System.Xml.Serialization;
+
     /// <summary>
     /// X3DPrimitiveField is the abstract non-generic field type inherited by
     /// generic version of this class. This is needed to group all the instantiated

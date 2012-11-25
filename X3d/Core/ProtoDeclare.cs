@@ -1,19 +1,68 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
+    using System.Xml;
 
     public class ProtoDeclare : X3DPrototype, ChildContentModelSceneGraphStructure
     {
-        [XmlElement(IsNullable = true, Order = 0)]
+        public const string ElementName = "ProtoDeclare";
+
+        public const string AppInfoAttributeName = "appinfo";
+
+        public const string DocumentationAttributeName = "documentation";
+
+        public ProtoDeclare()
+        {
+            this.Interface = null;
+            this.Body = null;
+            this.AppInfo = null;
+            this.Documentation = null;
+        }
+
         public ProtoInterface Interface { get; set; }
 
-        [XmlElement(Order = 1)]
         public ProtoBody Body { get; set; }
 
-        [XmlAttribute(AttributeName = "appInfo")]
         public SFString AppInfo { get; set; }
 
-        [XmlAttribute(AttributeName = "documentation")]
         public SFString Documentation { get; set; }
+
+        protected override void WriteAttributes(XmlWriter writer)
+        {
+            base.WriteAttributes(writer);
+
+            if (this.AppInfo != null)
+            {
+                writer.WriteAttributeString(AppInfoAttributeName, this.AppInfo.ToString());
+            }
+
+            if (this.Documentation != null)
+            {
+                writer.WriteAttributeString(DocumentationAttributeName, this.Documentation.ToString());
+            }
+        }
+
+        protected override void WriteChildElements(XmlWriter writer)
+        {
+            base.WriteChildElements(writer);
+
+            if (this.Interface != null)
+            {
+                this.Interface.Write(writer);
+            }
+
+            if (this.Body != null)
+            {
+                this.Body.Write(writer);
+            }
+        }
+
+        public override void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);
+
+            base.Write(writer);
+
+            writer.WriteEndElement();
+        }
     }
 }

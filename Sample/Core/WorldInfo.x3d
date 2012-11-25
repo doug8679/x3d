@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<X3D version="3.2" profile="Core">
+  <Scene>
+    <WorldInfo />
+    <WorldInfo title="Hello" />
+    <WorldInfo containerField="Test">
+      <MetadataDouble containerField="metadata" />
+    </WorldInfo>
+    <WorldInfo info="&quot;A&quot; &quot;B&quot; &quot;C&quot;" />
+    <WorldInfo DEF="HelloWorld" />
+    <WorldInfo>
+      <IS>
+        <connect nodeField="a" protoField="b" />
+        <connect nodeField="c" protoField="d" />
+      </IS>
+    </WorldInfo>
+  </Scene>
+</X3D>
