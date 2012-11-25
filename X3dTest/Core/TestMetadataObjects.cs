@@ -16,8 +16,8 @@
             var obj = new MetadataDouble();
 
             Assert.AreEqual(obj.ContainerField, "metadata");
-            Assert.AreEqual(obj.Name, string.Empty);
-            Assert.AreEqual(obj.Reference, string.Empty);
+            Assert.AreEqual(obj.Name, null);
+            Assert.AreEqual(obj.Reference, null);
         }
 
         [TestMethod]
@@ -26,8 +26,8 @@
             var obj = new MetadataFloat();
 
             Assert.AreEqual(obj.ContainerField, "metadata");
-            Assert.AreEqual(obj.Name, string.Empty);
-            Assert.AreEqual(obj.Reference, string.Empty);
+            Assert.AreEqual(obj.Name, null);
+            Assert.AreEqual(obj.Reference, null);
         }
 
         [TestMethod]
@@ -36,8 +36,8 @@
             var obj = new MetadataInteger();
 
             Assert.AreEqual(obj.ContainerField, "metadata");
-            Assert.AreEqual(obj.Name, string.Empty);
-            Assert.AreEqual(obj.Reference, string.Empty);
+            Assert.AreEqual(obj.Name, null);
+            Assert.AreEqual(obj.Reference, null);
         }
 
         [TestMethod]
@@ -46,8 +46,8 @@
             var obj = new MetadataSet();
 
             Assert.AreEqual(obj.ContainerField, "metadata");
-            Assert.AreEqual(obj.Name, string.Empty);
-            Assert.AreEqual(obj.Reference, string.Empty);
+            Assert.AreEqual(obj.Name, null);
+            Assert.AreEqual(obj.Reference, null);
         }
 
         [TestMethod]
@@ -56,8 +56,8 @@
             var obj = new MetadataString();
 
             Assert.AreEqual(obj.ContainerField, "metadata");
-            Assert.AreEqual(obj.Name, string.Empty);
-            Assert.AreEqual(obj.Reference, string.Empty);
+            Assert.AreEqual(obj.Name, null);
+            Assert.AreEqual(obj.Reference, null);
         }
     }
 }

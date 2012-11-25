@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("http://x3d.codeplex.com/")]
 [assembly: AssemblyProduct("X3D.NET Library")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Alexander Dong Back Kim")]
 [assembly: AssemblyTrademark("X3D.NET")]
 [assembly: AssemblyCulture("")]
 
