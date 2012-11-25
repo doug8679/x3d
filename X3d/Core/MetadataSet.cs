@@ -3,38 +3,42 @@
     using System;
     using System.Collections.Generic;
     using System.Xml;
-    using System.Xml.Schema;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The metadata provided by this node is contained in the metadata nodes of 
     /// the value field.
     /// </summary>
-    public class MetadataSet : X3DMetadataObject<List<ChildContentModelCore>>, ChildContentModelCore, IXmlSerializable
+    public class MetadataSet : X3DMetadataObject<List<ChildContentModelCore>>, ChildContentModelCore
     {
-        public void ReadXml(XmlReader reader)
-        {
-            throw new System.NotImplementedException();
-        }
+        public const string ElementName = "MetadataSet";
 
-        public void WriteXml(XmlWriter writer)
+        protected override void WriteAttributes(XmlWriter writer)
         {
-            var ns = new XmlSerializerNamespaces();
-            ns.Add(string.Empty, string.Empty);
-            
-            this.WriteXmlAttributes(writer);
+            base.WriteAttributes(writer);
 
-            foreach (var child in this.Value)
+            if (this.Value.Count > 0)
             {
-                Type childType = child.GetType();
-                var serializer = new XmlSerializer(childType);
-                serializer.Serialize(writer, child, ns);
+                writer.WriteAttributeString(ValueAttributeName, this.Value.ToString());
             }
         }
 
-        public XmlSchema GetSchema()
+        protected override void WriteChildElements(XmlWriter writer)
         {
-            throw new System.NotImplementedException();
+            base.WriteChildElements(writer);
+
+            foreach (var item in this.Value)
+            {
+                ((X3DMetadataObject)item).Write(writer);
+            }
+        }
+
+        public override void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);
+
+            base.Write(writer);
+
+            writer.WriteEndElement();
         }
     }
 }

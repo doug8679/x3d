@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <X3D version="3.2" profile="Core">
   <head>
     <component name="CADGeometry" level="1" />
@@ -13,7 +13,7 @@
     <component name="Geometry3D" level="1" />
     <component name="Geospatial" level="1" />
     <component name="Grouping" level="1" />
-    <component name="H-Anim" level="1" />
+    <component name="H_Anim" level="1" />
     <component name="Interpolation" level="1" />
     <component name="KeyDeviceSensor" level="1" />
     <component name="Layering" level="1" />

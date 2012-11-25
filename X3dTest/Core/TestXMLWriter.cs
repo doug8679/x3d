@@ -25,7 +25,7 @@
         }
 
         [TestMethod]
-        public void Serialization_Simple()
+        public void Write_Simple()
         {
             const string file = @"..\..\..\Sample\Core\simple.x3d";
             
@@ -35,7 +35,7 @@
         }
 
         [TestMethod]
-        public void Serialization_EmptyHead()
+        public void Write_EmptyHead()
         {
             const string file = @"..\..\..\Sample\Core\empty_head.x3d";
 
@@ -46,7 +46,7 @@
         }
 
         [TestMethod]
-        public void Serialization_Components()
+        public void Write_Components()
         {
             const string file = @"..\..\..\Sample\Core\components.x3d";
 
@@ -94,7 +94,7 @@
         }
 
         [TestMethod]
-        public void Serialization_Meta()
+        public void Write_Meta()
         {
             const string file = @"..\..\..\Sample\Core\meta.x3d";
 
@@ -130,7 +130,7 @@
         }
 
         [TestMethod]
-        public void Serialization_MetaDataObjects()
+        public void Write_MetaDataObjects()
         {
             const string file = @"..\..\..\Sample\Core\metadata.x3d";
 
@@ -167,7 +167,7 @@
         }
 
         [TestMethod]
-        public void Serialization_WorldInfo()
+        public void Write_WorldInfo()
         {
             const string file = @"..\..\..\Sample\Core\WorldInfo.x3d";
 
@@ -179,7 +179,7 @@
             wi2.Title = "Hello";
 
             var wi3 = new WorldInfo();
-            //wi3.Metadata = new MetadataDouble();
+            wi3.Metadata = new MetadataDouble();
             wi3.ContainerField = "Test";
 
             var wi4 = new WorldInfo();

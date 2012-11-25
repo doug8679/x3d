@@ -1,10 +1,7 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Collections.Generic;
     using System.Xml;
-    using System.Xml.Schema;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The WorldInfo node contains information about the world. This node is 
@@ -17,6 +14,8 @@
     /// </summary>
     public class WorldInfo : X3DInfoNode, ChildContentModelInterchange
     {
+        public const string ElementName = "WorldInfo";
+
         public const string InfoAttributeName = "info";
 
         public const string TitleAttributeName = "title";
@@ -24,54 +23,36 @@
         public WorldInfo()
         {
             this.ContainerField = null;
-            this.Info = new MFString();
+            this.Info = null;
             this.Title = null;
         }
 
-        [XmlIgnore]
         public MFString Info { get; set; }
 
-        [XmlAttribute(AttributeName = InfoAttributeName)]
-        public string InfoString
-        {
-            get
-            {
-                if (this.Info.Count > 0)
-                {
-                    return this.Info;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            set
-            {
-                this.Info = value;
-            }
-        }
-
-        [XmlIgnore]
         public SFString Title { get; set; }
 
-        [XmlAttribute(AttributeName = TitleAttributeName)]
-        public string TitleString
+        protected override void WriteAttributes(XmlWriter writer)
         {
-            get
+            base.WriteAttributes(writer);
+
+            if (this.Info != null)
             {
-                return this.Title;
+                writer.WriteAttributeString(InfoAttributeName, this.Info.ToString());
             }
 
-            set
+            if (this.Title != null)
             {
-                this.Title = value;
+                writer.WriteAttributeString(TitleAttributeName, this.Title.ToString());
             }
         }
 
-        public XmlSchema GetSchema()
+        public override void Write(XmlWriter writer)
         {
-            throw new System.NotImplementedException();
+            writer.WriteStartElement(ElementName);
+
+            base.Write(writer);
+
+            writer.WriteEndElement();
         }
     }
 }

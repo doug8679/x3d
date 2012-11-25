@@ -1,7 +1,7 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Xml;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// This abstract node type is the base type for all nodes in the X3D system.
@@ -17,7 +17,7 @@
         public const string USEAttributeName = "USE";
 
         public const string ContainerNameAttrubuteName = "containerField";
-        
+
         protected X3DNode()
         {
             this.IS = null;
@@ -27,79 +27,51 @@
             this.ContainerField = null;
         }
 
-        [XmlElement(ElementName = "IS", Order = 0)]
         public IS IS { get; set; }
 
-        [XmlElement(Order = 1)]
-        public X3DMetadataObject Metadata { get; set; }
+        public ChildContentModelCore Metadata { get; set; }
 
-        [XmlIgnore]
         public SFString DEF { get; set; }
 
-        [XmlAttribute(AttributeName = DEFAttributeName)]
-        public string DEFString
-        {
-            get
-            {
-                return this.DEF;
-            }
-
-            set
-            {
-                this.DEF = value;
-            }
-        }
-
-        [XmlIgnore]
         public SFString USE { get; set; }
 
-        [XmlAttribute(AttributeName = USEAttributeName)]
-        public string USEString
-        {
-            get
-            {
-                return this.USE;
-            }
-
-            set
-            {
-                this.USE = value;
-            }
-        }
-
-        [XmlIgnore]
         public SFString ContainerField { get; set; }
 
-        [XmlAttribute(AttributeName = ContainerNameAttrubuteName)]
-        public string ContainerFieldString
-        {
-            get
-            {
-                return this.ContainerField;
-            }
-
-            set
-            {
-                this.ContainerField = value;
-            }
-        }
-
-        public virtual void WriteXmlAttributes(XmlWriter writer)
+        protected virtual void WriteAttributes(XmlWriter writer)
         {
             if (this.DEF != null)
             {
-                writer.WriteAttributeString(DEFAttributeName, this.DEFString);
+                writer.WriteAttributeString(DEFAttributeName, this.DEF.ToString());
             }
 
             if (this.USE != null)
             {
-                writer.WriteAttributeString(USEAttributeName, this.USEString);
+                writer.WriteAttributeString(USEAttributeName, this.USE.ToString());
             }
 
             if (this.ContainerField != null)
             {
-                writer.WriteAttributeString(ContainerNameAttrubuteName, this.ContainerFieldString);
+                writer.WriteAttributeString(ContainerNameAttrubuteName, this.ContainerField.ToString());
             }
+        }
+
+        protected virtual void WriteChildElements(XmlWriter writer)
+        {
+            if (this.IS != null)
+            {
+                this.IS.Write(writer);
+            }
+
+            if (this.Metadata != null)
+            {
+                ((X3DMetadataObject)this.Metadata).Write(writer);
+            }
+        }
+
+        public virtual void Write(XmlWriter writer)
+        {
+            this.WriteAttributes(writer);
+            this.WriteChildElements(writer);
         }
     }
 }   

@@ -1,7 +1,6 @@
 ﻿namespace X3d.Core
 {
     using System.Xml;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// This abstract interface is the basis for all metadata nodes. The 
@@ -12,7 +11,6 @@
     /// meaning of the name field is considered implicit to the characters 
     /// in the string.
     /// </summary>
-    [XmlInclude(typeof(MetadataDouble))]
     public abstract class X3DMetadataObject : X3DNode, ChildContentModelCore
     {
         public const string NameAttributeName = "name";
@@ -26,56 +24,25 @@
             this.Reference = null;
         }
 
-        [XmlIgnore]
         public SFString Name { get; set; }
 
-        [XmlAttribute(AttributeName = NameAttributeName)]
-        public string NameString
-        {
-            get
-            {
-                return this.Name;
-            }
-
-            set
-            {
-                this.Name = value;
-            }
-        }
-
-        [XmlIgnore]
         public SFString Reference { get; set; }
 
-        [XmlAttribute(AttributeName = ReferenceAttributeName)]
-        public string ReferenceString
+        protected override void WriteAttributes(XmlWriter writer)
         {
-            get
-            {
-                return this.Reference;
-            }
+            base.WriteAttributes(writer);
 
-            set
-            {
-                this.Reference = value;
-            }
-        }
-
-        public override void WriteXmlAttributes(XmlWriter writer)
-        {
-            base.WriteXmlAttributes(writer);
-            
             if (this.Name != null)
             {
-                writer.WriteAttributeString(NameAttributeName, this.NameString);
+                writer.WriteAttributeString(NameAttributeName, this.Name);
             }
 
             if (this.Reference != null)
             {
-                writer.WriteAttributeString(ReferenceAttributeName, this.ReferenceString);
+                writer.WriteAttributeString(ReferenceAttributeName, this.Reference);
             }
         }
     }
-
     
     public abstract class X3DMetadataObject<MetadataType> : X3DMetadataObject
         where MetadataType : new()
@@ -87,7 +54,6 @@
             this.Value = new MetadataType();
         }
 
-        [XmlIgnore]
         public MetadataType Value { get; set; }
     }
 }

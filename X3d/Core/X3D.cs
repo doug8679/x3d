@@ -49,18 +49,18 @@
         {
             writer.WriteStartElement(ElementName);
 
+            writer.WriteAttributeString(VersionAttributeName,
+                                        X3DVersionConverter.ToString(this.Version));
+
+            writer.WriteAttributeString(ProfileAttributeName,
+                                        ProfileNamesConverter.ToString(this.Profile));
+
             if (this.Head != null)
             {
                 this.Head.Write(writer);
             }
 
             this.Scene.Write(writer);
-
-            writer.WriteAttributeString(VersionAttributeName, 
-                                        X3DVersionConverter.ToString(this.Version));
-
-            writer.WriteAttributeString(ProfileAttributeName,
-                                        ProfileNamesConverter.ToString(this.Profile));
 
             writer.WriteEndElement();
         }

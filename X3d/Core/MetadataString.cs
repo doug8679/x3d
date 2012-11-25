@@ -1,43 +1,32 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
+    using System.Xml;
 
     /// <summary>
     /// The metadata provided by this node is contained in the strings of 
     /// the value field.
     /// </summary>
-    public class MetadataString 
-        : X3DMetadataObject<MFString>, ChildContentModelCore
+    public class MetadataString : X3DMetadataObject<MFString>, ChildContentModelCore
     {
-        [XmlAttribute(AttributeName = "value")]
-        public string ValueString
-        {
-            get
-            {
-                if (this.Value.Count > 0)
-                {
-                    return this.Value.ToString();
-                }
-                else
-                {
-                    return null;
-                }
-            }
+        public const string ElementName = "MetadataString";
 
-            set
+        protected override void WriteAttributes(XmlWriter writer)
+        {
+            base.WriteAttributes(writer);
+
+            if (this.Value.Count > 0)
             {
-                this.Value.FromString(value);
+                writer.WriteAttributeString(ValueAttributeName, this.Value.ToString());
             }
         }
 
-        public override void WriteXmlAttributes(System.Xml.XmlWriter writer)
+        public override void Write(XmlWriter writer)
         {
-            base.WriteXmlAttributes(writer);
+            writer.WriteStartElement(ElementName);
 
-            if (this.Value != null && this.Value.Count > 0)
-            {
-                writer.WriteAttributeString(ValueAttributeName, ValueString);
-            }
+            base.Write(writer);
+
+            writer.WriteEndElement();
         }
     }
 }
