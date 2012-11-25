@@ -1,5 +1,6 @@
 ﻿namespace X3d.Core
 {
+    using System;
     using System.Xml.Serialization;
 
     /// <summary>
@@ -41,5 +42,14 @@
         }
 
         #endregion Integer Compatibility
+
+        #region
+
+        public override void FromString(string str)
+        {
+            this.Primitive = int.Parse(str);
+        }
+
+        #endregion
     }
 }

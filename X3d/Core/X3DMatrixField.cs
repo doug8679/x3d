@@ -79,6 +79,20 @@
             return builder.ToString().TrimEnd(' ');
         }
 
+        public override void FromString(string str)
+        {
+            var delimiter = new char[] { ' ' };
+            var tokens = str.Split(delimiter);
+            
+            for (var row = 0; row < this.Elements.GetLength(0); row++)
+            {
+                for (var col = 0; col < this.Elements.GetLength(1); col++)
+                {
+                    this.Elements[row, col].FromString(tokens[(row * this.Elements.GetLength(0)) + col]);
+                }
+            }
+        }
+
         #endregion String Compatibility
     }
 }

@@ -1,13 +1,55 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
+    using System;
+    using System.Xml;
 
-    public class EXPORT : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
+    public class Export : SceneGraphStructureNodeType, ChildContentModelSceneGraphStructure
     {
-        [XmlElement(IsNullable = false)]
-        public SFString LocalDEF { get; set; }
+        public const string ElementName = "IMPORT";
 
-        [XmlElement(IsNullable = true)]
-        public SFString AS { get; set; }
+        public const string LocalDEFAttributeName = "localDEF";
+
+        public const string ASAttributeName = "AS";
+ 
+        public Export()
+        {
+            this.LocalDEF = string.Empty;
+            this.AS = null;
+        }
+
+        private string localDEF;
+        public string LocalDEF 
+        {
+            get
+            {
+                return this.localDEF;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    throw new FormatException();
+                }
+
+                this.localDEF = value;
+            }
+        }
+
+        public string AS { get; set; }
+
+        public void Write(XmlWriter writer)
+        {
+            writer.WriteStartElement(ElementName);
+
+            writer.WriteAttributeString(LocalDEFAttributeName, this.LocalDEF);
+            
+            if (this.AS != null)
+            {
+                writer.WriteAttributeString(ASAttributeName, this.AS);
+            }
+
+            writer.WriteEndElement();
+        }
     }
 }
