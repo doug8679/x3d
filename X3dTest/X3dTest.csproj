@@ -80,6 +80,7 @@
     <Compile Include="Core\TestSFNode.cs" />
     <Compile Include="Core\TestX3DArrayField.cs" />
     <Compile Include="Core\TestXMLWriter.cs" />
+    <Compile Include="Core\TestAccessTypeNamesConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
