@@ -3,14 +3,6 @@
     using System;
     using System.Xml;
 
-    /*
-     * <xs:group name="ChildContentModelSceneGraphStructure">
-    <xs:choice>
-      <xs:element ref="ProtoDeclare" />
-    </xs:choice>
-  </xs:group>
-     */
-
     public abstract class X3DPrototype : SceneGraphStructureNodeType
     {
         public const string NameAttributeName = "name";
