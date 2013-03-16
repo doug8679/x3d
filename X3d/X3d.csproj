@@ -102,7 +102,6 @@
     <Compile Include="Core\X3DPrototype.cs" />
     <Compile Include="Core\X3DPrototypeInstance.cs" />
     <Compile Include="Core\X3DSensorNode.cs" />
-    <Compile Include="Core\X3DSerializable.cs" />
     <Compile Include="Core\X3DVectorField.cs" />
     <Compile Include="Core\X3DVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,7 +143,6 @@
     <Folder Include="VolumeRendering\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="X3D.NET Core.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

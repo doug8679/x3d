@@ -1,7 +1,5 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
-
     /// <summary>
     /// The SFNode field specifies an X3D node. The default value of
     /// an uninitialized. SFNode field is NULL.
@@ -13,7 +11,6 @@
     /// look up feature which makes this type as a sub type of
     /// SFString field.
     /// </summary>
-    [XmlType(TypeName = "SFNode")]
     public class SFNode : SFString
     {
         public const string Null = "NULL";
