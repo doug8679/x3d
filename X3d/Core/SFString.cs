@@ -1,14 +1,11 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
-
     /// <summary>
     /// The SFString field contain strings encoded with the UTF-8 universal
     /// character set. Any characters (including linefeeds and '#') may appear
     /// within the string. The default value of an uninitialized SFString
     /// outputOnly field is the empty string.
     /// </summary>
-    [XmlType(TypeName = "SFString")]
     public class SFString : X3DField
     {
         #region Constructors

@@ -1,7 +1,5 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
-
     /// <summary>
     /// The SFRotation field specifies one arbitrary rotation. An SFRotation is
     /// written to the X3D file as four floating point values. The allowable
@@ -10,7 +8,6 @@
     /// which the rotation takes place. The fourth value specifies the amount
     /// of right-handed rotation about that axis in radians.
     /// </summary>
-    [XmlType(TypeName = "SFRotation")]
     public class SFRotation : SFVec3f
     {
         #region Constructors

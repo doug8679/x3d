@@ -1,7 +1,6 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFMatrix3f field specifies a 3×3 matrix of single-precision floating
@@ -13,7 +12,6 @@
     /// translation values are stored in the third row. The default value of an
     /// uninitialized SFMatrix3f field is the identity matrix [1 0 0 0 1 0 0 0 1].
     /// </summary>
-    [XmlType(TypeName = "SFMatrix3f")]
     public class SFMatrix3f : X3DMatrixField<SFFloat>
     {
         public static readonly SFFloat[,] Identity = new SFFloat[,]

@@ -1,13 +1,11 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFInt32 field specifies one 32-bit integer. The default value
     /// of an uninitialized SFInt32 field is 0.
     /// </summary>
-    [XmlType(TypeName = "SFInt32")]
     public class SFInt32 : X3DPrimitiveField<int>
     {
         #region Constructors

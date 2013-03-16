@@ -7,17 +7,11 @@
     public class Field : SceneGraphStructureNodeType
     {
         public const string ElementName = "field";
-
         public const string NameAttributeName = "name";
-
         public const string AccessTypeAttributeName = "accessType";
-
         public const string TypeAttributeName = "type";
-
         public const string ValueAttributeName = "value";
-
         public const string AppInfoAttributeName = "appinfo";
-
         public const string DocumentationAttributeName = "documentation";
 
         public Field()
@@ -84,7 +78,7 @@
             writer.WriteStartElement(ElementName);
 
             writer.WriteAttributeString(NameAttributeName, this.Name);
-            writer.WriteAttributeString(AccessTypeAttributeName, AccessTypeNamesConverter.ToString(this.AccessType));
+            writer.WriteAttributeString(AccessTypeAttributeName, this.AccessType.ToString("g"));
             writer.WriteAttributeString(TypeAttributeName, FieldTypeNameConverter.ToString(this.Type));
 
             if (this.Value != null)

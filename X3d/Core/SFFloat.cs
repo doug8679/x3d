@@ -1,7 +1,5 @@
 ﻿namespace X3d.Core
 {
-    using System.Xml.Serialization;
-
     /// <summary>
     /// The SFFloat field specifies one single-precision floating point number.
     /// Implementation of these fields is targeted at the single precision
@@ -11,7 +9,6 @@
     /// range of at least [-12, 12] for both positive and negative numbers.
     /// The default value of an uninitialized SFFloat field is 0.0.
     /// </summary>
-    [XmlType(TypeName = "SFFloat")]
     public class SFFloat : X3DPrimitiveField<float>
     {
         #region Constructors

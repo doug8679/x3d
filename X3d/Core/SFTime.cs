@@ -1,7 +1,6 @@
 ﻿namespace X3d.Core
 {
     using System;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// The SFTime field specifies a single time value. Time values are
@@ -13,7 +12,6 @@
     /// 00:00:00 GMT. The default value of an uninitialized SFTime field
     /// is -1.
     /// </summary>
-    [XmlType(TypeName = "SFTime")]
     public class SFTime : SFDouble
     {
         public static readonly DateTime Zero = new DateTime(1970, 1, 1);
