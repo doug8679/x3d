@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using System.Text;
     using System.Text.RegularExpressions;
-    using System.Xml.Serialization;
 
     /// <summary>
     /// X3DArrayField is the abstract field type from which all field types that
@@ -47,7 +46,6 @@
 
     #region X3D Array Field Types
 
-    [XmlType(TypeName = "MFBool")] 
     public class MFBool : X3DArrayField<SFBool>
     {
         #region String Compatibility
@@ -75,7 +73,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFColor")] 
     public class MFColor : X3DArrayField<SFColor>
     {
         #region String Compatibility
@@ -97,7 +94,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFColorRGBA")] 
     public class MFColorRGBA : X3DArrayField<SFColorRGBA>
     {
         #region String Compatibility
@@ -119,7 +115,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFDouble")] 
     public class MFDouble : X3DArrayField<SFDouble>
     {
         #region String Compatibility
@@ -147,7 +142,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFFloat")]
     public class MFFloat : X3DArrayField<SFFloat>
     {
         #region String Compatibility
@@ -175,7 +169,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFImage")]
     public class MFImage : X3DArrayField<SFImage>
     {
         #region String Compatibility
@@ -197,7 +190,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFInt32")]
     public class MFInt32 : X3DArrayField<SFInt32>
     {
         #region String Compatibility
@@ -225,7 +217,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFMatrix3d")]
     public class MFMatrix3d : X3DArrayField<SFMatrix3d>
     {
         #region String Compatibility
@@ -247,7 +238,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFMatrix3f")]
     public class MFMatrix3f : X3DArrayField<SFMatrix3f>
     {
         #region String Compatibility
@@ -269,7 +259,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFMatrix4d")]
     public class MFMatrix4d : X3DArrayField<SFMatrix4d>
     {
         #region String Compatibility
@@ -291,7 +280,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFMatrix4f")]
     public class MFMatrix4f : X3DArrayField<SFMatrix4f>
     {
         #region String Compatibility
@@ -313,7 +301,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFNode")]
     public class MFNode : X3DArrayField<SFNode>
     {
         #region String Compatibility
@@ -341,7 +328,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFRotation")]
     public class MFRotation : X3DArrayField<SFRotation>
     {
         #region String Compatibility
@@ -363,7 +349,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFString")]
     public class MFString : X3DArrayField<SFString>
     {
         #region String Compatibility
@@ -410,7 +395,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFTime")]
     public class MFTime : X3DArrayField<SFTime>
     {
         #region String Compatibility
@@ -438,7 +422,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec2d")]
     public class MFVec2d : X3DArrayField<SFVec2d>
     {
         #region String Compatibility
@@ -460,7 +443,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec2f")]
     public class MFVec2f : X3DArrayField<SFVec2f>
     {
         #region String Compatibility
@@ -482,7 +464,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec3d")]
     public class MFVec3d : X3DArrayField<SFVec3d>
     {
         #region String Compatibility
@@ -504,7 +485,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec3f")]
     public class MFVec3f : X3DArrayField<SFVec3f>
     {
         #region String Compatibility
@@ -526,7 +506,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec4d")]
     public class MFVec4d : X3DArrayField<SFVec4d>
     {
         #region String Compatibility
@@ -548,7 +527,6 @@
         #endregion
     }
 
-    [XmlType(TypeName = "MFVec4f")]
     public class MFVec4f : X3DArrayField<SFVec4f>
     {
         #region String Compatibility

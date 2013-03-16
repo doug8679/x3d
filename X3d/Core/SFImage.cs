@@ -2,7 +2,6 @@
 {
     using System;
     using System.Text;
-    using System.Xml.Serialization;
 
     public enum SFImageComponentSize
     {
@@ -38,7 +37,6 @@
     /// the last value is the upper right pixel. The default value of an SFImage
     /// outputOnly field is (0 0 0).
     /// </summary>
-    [XmlType(TypeName = "SFImage")]
     public class SFImage : X3DField
     {
         #region Constructors
